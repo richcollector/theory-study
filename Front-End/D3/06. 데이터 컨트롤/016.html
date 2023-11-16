@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DATA CONTROL</title>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  </head>
+  <body>
+    <script>
+      // range는 전체 width
+      // domain의 전체 count를 range 값으로 "동일하게" 분할하여 분배
+      const f1 = d3
+        .scaleLinear()
+        .range([[0, 100]]) // 범위
+        .domain([0, 500]); // 실제값
+      console.log(f1(10));
+
+      // rgb
+      crayons = d3
+        .scaleLinear()
+        .domain([-1, 0, 1])
+        .range(["orange", "white", "green"]);
+      console.log(crayons(0.3));
+
+      // 인구밀도
+      const f2 = d3
+        .scaleLinear()
+        .range([200, 500])
+        .domain([20000000, 50000000]);
+      console.log(f2(25000000));
+    </script>
+  </body>
+</html>

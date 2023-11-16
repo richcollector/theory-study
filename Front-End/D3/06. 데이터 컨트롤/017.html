@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DATA CONTROL</title>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  </head>
+  <body>
+    <script>
+      // range는 전체 width
+      // domain의 전체 count를 range 값으로 "동일하게" 분할하여 분배
+      const f1 = d3
+        .scaleBand()
+        .range([[0, 100]]) // 범위
+        .domain(["one", "two", "three", "four"]); // 실제값
+      console.log(f1("one"));
+      console.log(f1("two"));
+      console.log(f1("three"));
+      console.log(f1("four"));
+
+      console.log(f1.bandwidth());
+    </script>
+  </body>
+</html>

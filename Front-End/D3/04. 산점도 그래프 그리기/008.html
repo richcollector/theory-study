@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scatter</title>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  </head>
+  <body>
+    <svg id="sample1">
+      <circle></circle>
+      <circle></circle>
+    </svg>
+    <hr />
+    <svg id="sample2">
+      <circle></circle>
+      <circle></circle>
+      <circle></circle>
+      <circle></circle>
+      <circle></circle>
+      <circle></circle>
+      <circle></circle>
+      <circle></circle>
+    </svg>
+
+    <script>
+      const sampleData = [
+        [5, 20, 30, "#ff0000"],
+        [5, 320, 90, "#ff0000"],
+        [5, 150, 50, "#ff0000"],
+        [7, 120, 70, "#ff0000"],
+        [7, 530, 110, "#ff0000"],
+        [7, 410, 20, "#ff0000"],
+        [12, 720, 60, "#ff0000"],
+        [12, 30, 110, "#ff0000"],
+        [12, 90, 130, "#ff0000"],
+        [19, 510, 180, "#ff0000"],
+        [19, 310, 120, "#ff0000"],
+        [8, 50, 150, "#ff0000"],
+        [7, 50, 350, "#ff0000"],
+      ];
+      // enter() : data가 기존 html 요소의 수보다 많을 때는,
+      // enter를 사용해서 남는 데이터들을 추가로 선택해주고 스타일을 변경해줍니다.
+      const scatter1 = d3
+        .select("#sample1")
+        .attr("width", 1000)
+        .attr("height", 300);
+
+      scatter1
+        .selectAll("circle")
+        .data(sampleData)
+        .attr("r", (d) => d[0])
+        .attr("cx", (d) => d[1])
+        .attr("cy", (d) => d[2])
+        .attr("fill", (d) => d[3])
+        .enter()
+        .append("circle") //데이터 수만큼 circle를 생성
+        .attr("r", (d) => d[0])
+        .attr("cx", (d) => d[1])
+        .attr("cy", (d) => d[2])
+        .attr("fill", (d) => d[3]);
+
+      const scatter2 = d3
+        .select("#sample2")
+        .attr("width", 1000)
+        .attr("height", 300);
+
+      scatter2
+        .selectAll("circle")
+        .data(sampleData)
+        .attr("r", (d) => d[0])
+        .attr("cx", (d) => d[1])
+        .attr("cy", (d) => d[2])
+        .attr("fill", (d) => d[3])
+        .exit()
+        .remove();
+    </script>
+  </body>
+</html>

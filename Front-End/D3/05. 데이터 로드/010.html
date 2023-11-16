@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DATA</title>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  </head>
+  <body>
+    <div class="canvas"></div>
+
+    <script>
+      const canvas = d3.select(".canvas");
+
+      console.log(d3.csv("data/data2.csv"));
+
+      d3.csv("data/data2.csv")
+        .then((res) => {
+          console.log(res);
+
+          const svg = canvas
+            .append("svg")
+            .attr("height", 2000)
+            .attr("width", 2000);
+
+          res.forEach((e) => {
+            svg
+              .append("circle")
+              .attr("cx", (e.위도 - 33.1) * 1000 + 10)
+              .attr("cy", (e.경도 - 126) * 200 + 10)
+              .attr("r", 5)
+              .attr("fill", "hotpink");
+          });
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    </script>
+  </body>
+</html>

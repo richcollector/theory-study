@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DATA</title>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  </head>
+  <body>
+    <div class="canvas"></div>
+
+    <script>
+      const canvas = d3.select(".canvas");
+      console.log(d3.xml("data/data5.xml"));
+
+      d3.xml("data/data5.xml")
+        .then((res) => {
+          console.log(res);
+          console.log(res.documentElement);
+          console.log(res.documentElement.getElementsByTagName("row"));
+          console.log(res.documentElement.getElementsByTagName("row")[0]);
+          new Array(res.documentElement.getElementsByTagName("row")).forEach(
+            (e) => {
+              console.log(e);
+              console.log(e[0].childNodes);
+            }
+          );
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    </script>
+  </body>
+</html>

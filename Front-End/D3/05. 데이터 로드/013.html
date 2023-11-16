@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DATA</title>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  </head>
+  <body>
+    <div class="canvas"></div>
+
+    <script>
+      const canvas = d3.select(".canvas");
+      //기존에 있었던 request 모듈은 v5부터 없어짐
+      console.log(
+        d3.json(
+          "https://raw.githubusercontent.com/paullabkorea/coronaVaccinationStatus/main/data/data.json"
+        )
+      );
+
+      d3.json(
+        "https://raw.githubusercontent.com/paullabkorea/coronaVaccinationStatus/main/data/data.json"
+      )
+        .then((res) => {
+          console.log(res);
+
+          res.forEach((e) => {
+            console.log(e["시·도별(1)"]);
+          });
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    </script>
+  </body>
+</html>

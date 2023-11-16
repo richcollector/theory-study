@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DATA CONTROL</title>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  </head>
+  <body>
+    <script>
+      // range는 전체 width
+      // domain의 전체 count를 range 값으로 "동일하게" 분할하여 분배
+      const f1 = d3
+        .scalePoint()
+        .range([[0, 100]]) // 범위
+        .domain([10, 20, 30, 40]); // 실제값
+      console.log(f1(10));
+
+      const f2 = d3
+        .scalePoint()
+        .range([[0, 100]]) // 범위
+        .domain(["a", "b", "c", "d"]); // 실제값
+      console.log(f2("b"));
+
+      // padding이 붙었을 경우 각 요소의 간격에
+      // padding을 곱하여 양쪽 여백으로 줌
+      const f3 = d3
+        .scalePoint()
+        .range([[0, 100]]) // 범위
+        .domain(["a", "b", "c", "d"]) // 실제값
+        .padding(0.3); // 그래프 안의 여백
+      console.log(f3("d"));
+
+      const f4 = d3
+        .scalePoint()
+        .reange([100, 200])
+        .domain(["a", "b", "c", "d"]);
+      console.log(f4("b"));
+    </script>
+  </body>
+</html>
