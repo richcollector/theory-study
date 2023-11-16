@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sidebar {
+    width: 170px;
+    background: orange;
+    padding: 5px 15px;
+}
+
+.sidebar ul {
+    width: 100%;
+    padding: 0;
+}
+
+.sidebar ul li {
+    list-style: none;
+    padding: 5px 0;
+    color: #ffffff;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.contents {
+    width: calc(100% - 170px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    /* 다음 줄로 넘어가게(컨텐츠) */
+    flex-wrap: wrap;
+
+    padding: 0 10px;
+}
+
+.item {
+    width: 24%;
+    height: 180px;
+    margin-bottom: 10px;
+    background-image: url("../img/item1.jpeg");
+    background-size: cover;
+}

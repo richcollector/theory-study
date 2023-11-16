@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 500px;
+    height: 320px;
+    position: relative;
+}
+
+.base {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #aaaaaa;
+    border-radius: 10px;
+    background: #dddddd;
+}
+
+.target {
+    width:200px;
+    height: 200px;
+    background: rgba(0, 0, 255, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid blue;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.target span {
+    color: #ffffff;
+}
+
+.target1 {
+    transform : translate(50%, 20px);
+
+}
+
+.target2 {
+    transform: scale(0.8, 1.2);
+
+}
+
+.target3 {
+    transform: skew(30deg, 0);
+}
+
+.target4 {
+    transform: rotate(45deg);
+}
+

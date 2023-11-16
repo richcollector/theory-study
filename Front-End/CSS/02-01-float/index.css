@@ -1,0 +1,15 @@
+.float-box{
+    width:200px;
+    height: 200px;
+    background-color: blue;
+    color: #ffffff;
+    padding: 30px;
+    box-sizing: border-box;
+    float: right;
+
+}
+
+p {
+    font-size: 20px;
+    clear:right;
+}

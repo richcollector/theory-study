@@ -1,0 +1,19 @@
+.title {
+    color: red;
+}
+
+.box1 .title {
+    color:yellow;
+}
+
+.contents {
+    font-size: 28px;
+    font-style: italic;
+    text-decoration: underline;
+    /* 보통 글자는 400정도 */
+    font-weight: 700;
+}
+
+.title#headline {
+    color:violet;
+}
