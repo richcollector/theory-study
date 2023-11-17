@@ -1,12 +1,15 @@
 ## 큐
 
+![queue](./queue.png)
+
 First in First Out이라는 개념을 가진 선형 자료구조다.
 Linear Queue와 Circular Queue가 존재한다.
 
-- Front 맨 앞
-- Rear 맨 뒤
-- EnQueue (추가)
-- DeQueue (빼는 것)
+- Enqueue : 큐 맨 뒤에 어떠한 요소를 추가, 마지막으로 온 손님에게 번호표 발부
+- Dequeue : 큐 맨 앞쪽의 요소를 삭제, 창구에서 서비스를 받은 손님의 번호표를 대기 목록에서 삭제
+- Peek : front에 위치한 데이터를 읽음, 다음 서비스를 받을 손님이 누구인지 확인
+- front : 큐의 맨 앞에 위치(인덱스), 다음 서비스를 받을 손님의 번호
+- rear : 큐의 맨 뒤의 위치(인덱스), 마지막에 온 손님의 번호
 
 ### Linear Queue
 
