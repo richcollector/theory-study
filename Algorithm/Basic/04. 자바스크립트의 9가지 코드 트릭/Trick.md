@@ -1,5 +1,6 @@
 1. 구조 분해 할당을 이용한 변수 swap
-   ES6의 구조 분해 할당 문법을 사용하여 두 변수를 swap 할 수 있다.
+
+ES6의 구조 분해 할당 문법을 사용하여 두 변수를 swap 할 수 있다.
 
 ```jsx
 let a = 5,
@@ -9,7 +10,8 @@ console.log(a, b); // 10 5
 ```
 
 2. 배열 생성으로 루프 제거하기
-   보통 단순히 범위 루프를 돌고 싶다면 다음과 같이 코드를 작성한다.
+
+보통 단순히 범위 루프를 돌고 싶다면 다음과 같이 코드를 작성한다.
 
 ```jsx
 let sum = 0;
@@ -28,7 +30,8 @@ const sum = Array.from(new Array(5), (_, k) => k + 5).reduce(
 ```
 
 3. 배열 내 같은 요소 제거하기
-   Set을 이용할 수 있다.
+
+Set을 이용할 수 있다.
 
 ```jsx
 const names = ["Lee", "Kim", "Park", "Lee", "Kim"];
@@ -37,7 +40,8 @@ const uniqueNamesWithSpread = [...new Set(names)];
 ```
 
 4. Spread 연산자를 이용한 객체 병합
-   두 객체를 별도 변수에 합쳐줄 수 있다.
+
+두 객체를 별도 변수에 합쳐줄 수 있다.
 
 ```jsx
 const person = {
@@ -62,7 +66,8 @@ console.log(leeSunHyoup);
 ```
 
 5. &&와 || 활용
-   &&와 ||는 조건문 외에서도 활용될 수 있다.
+
+&&와 ||는 조건문 외에서도 활용될 수 있다.
 
 ```jsx
 /// ||
@@ -88,7 +93,8 @@ console.log(makeCompany(true));
 ```
 
 6. 구조 분해 할당 사용하기
-   객체에서 필요한 것만 꺼내 쓰는 것이 좋다.
+
+객체에서 필요한 것만 꺼내 쓰는 것이 좋다.
 
 ```jsx
 const person = {

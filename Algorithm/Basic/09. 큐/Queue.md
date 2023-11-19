@@ -14,6 +14,7 @@ Linear Queue와 Circular Queue가 존재한다.
 ### Linear Queue
 
 - Array로 표현하기
+
   Front가 빠져나가고 배열을 재정리하는데, 선형 시간이 걸림.
 
   ```jsx
@@ -46,6 +47,7 @@ Linear Queue와 Circular Queue가 존재한다.
   ```
 
 - Linear Queue를 Linked List로 표현할 수 있다.
+
   Head는 Front가 되고, Tail은 Rear이 된다.
 
   ```jsx
