@@ -63,13 +63,13 @@ class SinglyLinkedList {
   }
 
   append(newValue) {
-    cons newNode = new Node(newValue);
-    if(this.head === null){
-        this.head = newNode;
-        this.tail = newNode;
+    const newNode = new Node(newValue);
+    if (this.head === null) {
+      this.head = newNode;
+      this.tail = newNode;
     } else {
-        this.tail.next = newNode;
-        this.tail = newNode;
+      this.tail.next = newNode;
+      this.tail = newNode;
     }
   }
 
@@ -82,11 +82,11 @@ class SinglyLinkedList {
   remove(value) {
     let prevNode = this.head;
     while (prevNode.next.value !== value) {
-        prevNode = prevNode.next;
+      prevNode = prevNode.next;
     }
 
     if (prevNode.next !== null) {
-        prevNode.next = prevNode.next.next;
+      prevNode.next = prevNode.next.next;
     }
   }
 
@@ -94,8 +94,8 @@ class SinglyLinkedList {
     let currNode = this.head;
     let displayString = "[]";
     while (currNode !== null) {
-        displaySTring += `${currNode.value}, `;
-        currNode = currNode.next;
+      displaySTring += `${currNode.value}, `;
+      currNode = currNode.next;
     }
     displayString = displayString.substr(0, displayString.length - 2);
     displayString += "]";

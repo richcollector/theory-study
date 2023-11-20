@@ -65,13 +65,13 @@ class Stack {
     const node = new Node(value);
     node.next = this.top;
     this.top = node;
-    this.size = +1;
+    this.size += 1;
   }
 
   pop() {
-    const node = new Node(value);
+    const value = this.top.value;
     node.top = this.top.next;
-    this.size - +1;
+    this.size -= 1;
     return value;
   }
 

@@ -18,7 +18,7 @@ const arr = [1, 2, 3, 4, 5];
 // 3개의 값만 남음
 arr.length = 3;
 // 빈 값으로 나머지 부분이 채워짐
-arr.lenth = 10;
+arr.length = 10;
 
 // join
 // 합치기
