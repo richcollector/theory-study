@@ -12,12 +12,12 @@ BFS(Breath First Search)는 너비 우선 탐색이라고 하며 시작 노드�
 
 ```jsx
 function BFS(graph, start, visited) {
-  const queue = new Queue();
+  const queue = [];
   queue.push(start);
   visited[start] = true;
 
   while (queue.size()) {
-    const v = queue.popleft();
+    const v = queue.shift();
     console.log(v);
 
     for (const node of graph[v]) {
