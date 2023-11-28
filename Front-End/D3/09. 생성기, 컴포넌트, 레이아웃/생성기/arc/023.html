@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D3</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <div class="canvas"></div>
+    <script>
+      const svg = d3
+        .select(".canvas")
+        .append("svg")
+        .attr("width", 1000)
+        .attr("height", 1000);
+      const g = svg.append("g").attr("transform", "translate(100, 100)");
+      // https://github.com/d3/d3-shape#arc
+      // const f = d3.arc().innerRadius().outerRadius().startAngle().endAngle()의 형태로 선언
+
+      data = [50, 150, 100, 200];
+      const f = d3.arc().innerRadius(0).outerRadius(50);
+      // .startAngle(Math.PI * 1.5)
+      // .endAngle(Math.PI * 2)
+
+      const pie = d3
+        .pie() // pie는 레이아웃
+        .sort((a, b) => b - a) // 내림차순 정렬
+        .value((d) => d); // object일 때, 'd.value' 형태로 사용
+
+      // curves
+      // https://github.com/d3/d3-shape#curves
+
+      console.log(f(data));
+      console.log(pie(data));
+
+      g.selectAll("path")
+        .data(pie(data))
+        .enter()
+        .append("path")
+        .attr("fill", "pink")
+        .attr("stroke", "blue")
+        .attr("stroke-width", "2px")
+        .attr("d", f);
+    </script>
+  </body>
+</html>

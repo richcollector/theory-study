@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D3</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <script>
+      data = [
+        10, 10, 20, 20, 30, 30, 30, 30, 30, 40, 40, 50, 50, 60, 60, 60, 60, 60,
+        60, 60,
+      ];
+      // https://github.com/d3/d3-array/blob/v3.1.6/README.md#bins
+
+      const hist = d3.histogram();
+      console.log(hist(data));
+
+      const bin = d3.bin();
+      console.log(bin(data));
+
+      for (const i of hist(data)[2]) {
+        console.log(i);
+      }
+
+      console.log(hist(data)[2].length);
+    </script>
+  </body>
+</html>

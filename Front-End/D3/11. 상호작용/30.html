@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D3</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+      .tooltip {
+        position: absolute;
+        text-align: center;
+        padding: 10px;
+        background: gray;
+        color: white;
+        border-radius: 3px;
+      }
+
+      h1 {
+        position: absolute;
+        height: 500px;
+        width: 500px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>hello world</h1>
+    <div class="canvas"></div>
+
+    <script>
+      // hover, click, tootip
+      const h1 = d3.select("h1");
+
+      const tooltip = d3.select("body").append("div");
+
+      h1.on("click", 경고);
+      // h1.on('mouseover', 경고)
+      // h1.on('mouseout', 경고)
+
+      function 경고(e) {
+        // alert('경고!')
+        console.log(e);
+        console.log(this);
+        console.log(this.innerText);
+        tooltip
+          .text("hello")
+          .attr("class", "tooltip")
+          .attr("style", `top:${e.y}px;left:${e.x}px;`);
+      }
+    </script>
+  </body>
+</html>

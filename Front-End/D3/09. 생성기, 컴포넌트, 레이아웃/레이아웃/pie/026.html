@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D3</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <div class="canvas"></div>
+    <script>
+      const svg = d3
+        .select(".canvas")
+        .append("svg")
+        .attr("width", 1000)
+        .attr("height", 1000);
+      const g = svg.append("g").attr("transform", "translate(100, 100)");
+
+      // data = [50, 150, 100, 200]
+      // 만약 여기서 pie에 도움 없이 arc로만 그래프를 그려야 한다면 아래와 같은 데이터가 있어야 합니다.
+      // 이러한 작업을 일일이 해준다는 것은 힘든작업이니, 레이아웃을 사용해주세요.
+      // https://github.com/d3/d3-shape/blob/v3.1.0/README.md#pies
+      data = [
+        {
+          data: 50,
+          index: 3,
+          value: 50,
+          startAngle: 5.654866776461628,
+          endAngle: 6.283185307179586,
+          padAngle: 0,
+        },
+        {
+          data: 150,
+          index: 1,
+          value: 150,
+          startAngle: 2.5132741228718345,
+          endAngle: 4.39822971502571,
+          padAngle: 0,
+        },
+        {
+          data: 100,
+          index: 2,
+          value: 100,
+          startAngle: 4.39822971502571,
+          endAngle: 5.654866776461628,
+          padAngle: 0,
+        },
+        {
+          data: 200,
+          index: 0,
+          value: 200,
+          startAngle: 0,
+          endAngle: 2.5132741228718345,
+          padAngle: 0,
+        },
+      ];
+      const f = d3.arc().innerRadius(0).outerRadius(50);
+      // .startAngle(Math.PI * 1.5)
+      // .endAngle(Math.PI * 2)
+
+      const pie = d3
+        .pie() // pie는 레이아웃
+        .sort((a, b) => b - a) // 내림차순 정렬
+        .value((d) => d); // object일 때, 'd.value' 형태로 사용
+
+      console.log(f(data));
+      console.log(pie(data));
+
+      g.selectAll("path")
+        // .data(pie(data))
+        .data(data)
+        .enter()
+        .append("path")
+        .attr("fill", "pink")
+        .attr("stroke", "blue")
+        .attr("stroke-width", "2px")
+        .attr("d", f);
+    </script>
+  </body>
+</html>

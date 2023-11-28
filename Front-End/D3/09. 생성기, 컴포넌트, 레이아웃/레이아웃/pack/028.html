@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D3</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <div class="canvas"></div>
+    <script>
+      const data = [
+        { name: "스타트업파이", parent: "" },
+
+        { name: "Education", parent: "스타트업파이" },
+        { name: "Food", parent: "스타트업파이" },
+        { name: "SW", parent: "스타트업파이" },
+        { name: "Healthcare", parent: "스타트업파이" },
+        { name: "E-commerce", parent: "스타트업파이" },
+
+        { name: "a-1", parent: "Education", size: 3 },
+        { name: "b-1", parent: "Education", size: 7 },
+        { name: "c-1", parent: "Education", size: 11 },
+        { name: "d-1", parent: "Education", size: 5 },
+        { name: "e-1", parent: "Education", size: 3 },
+        { name: "f-1", parent: "Education", size: 5 },
+
+        { name: "a-2", parent: "Food", size: 5 },
+        { name: "b-2", parent: "Food", size: 4 },
+        { name: "c-2", parent: "Food", size: 7 },
+        { name: "d-2", parent: "Food", size: 9 },
+
+        { name: "a-3", parent: "SW", size: 2 },
+        { name: "b-3", parent: "SW", size: 10 },
+        { name: "c-3", parent: "SW", size: 11 },
+        { name: "d-3", parent: "SW", size: 13 },
+        { name: "e-3", parent: "SW", size: 4 },
+        { name: "f-3", parent: "SW", size: 8 },
+
+        { name: "a-4", parent: "Healthcare", size: 3 },
+        { name: "b-4", parent: "Healthcare", size: 3 },
+        { name: "c-4", parent: "Healthcare", size: 4 },
+        { name: "d-4", parent: "Healthcare", size: 3 },
+        { name: "e-4", parent: "Healthcare", size: 4 },
+
+        { name: "a-5", parent: "E-commerce", size: 3 },
+        { name: "b-5", parent: "E-commerce", size: 7 },
+        { name: "c-5", parent: "E-commerce", size: 5 },
+        { name: "d-5", parent: "E-commerce", size: 5 },
+      ];
+
+      let margin = { top: 100, right: 100, bottom: 100, left: 100 };
+
+      const svg = d3
+        .select(".canvas")
+        .append("svg")
+        .attr("width", 1200)
+        .attr("height", 1200);
+
+      const g = svg
+        .append("g")
+        .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+      const stratify = d3
+        .stratify()
+        .id((d) => d.name)
+        .parentId((d) => d.parent);
+      // console.log(stratify(data))
+
+      const Node = stratify(data).sum((d) => d.size); // 부모 노드들의 value값을 size 기반으로 생성
+      // console.log(Node)
+
+      const pack = d3.pack().size([1000, 1000]).padding(10);
+      // console.log(pack)
+      // console.log(pack(Node))
+      console.log(pack(Node).descendants());
+
+      const packData = pack(Node).descendants();
+
+      const nodes = g
+        .selectAll("g")
+        .data(packData)
+        .enter()
+        .append("g")
+        .attr("transform", (d) => `translate(${d.x}, ${d.y})`);
+
+      const colors = ["pink", "green", "blue"];
+      nodes
+        .append("circle")
+        .attr("r", (d) => d.r)
+        .attr("stroke", "black")
+        .attr("stroke-width", 3)
+        .attr("fill", (d) => colors[d.depth]);
+
+      // nodes.filter(d => !d.children)
+      nodes
+        .filter((d) => d.depth == 2)
+        .append("text")
+        .attr("fill", "black")
+        .style("font-size", (d) => {
+          if (d.value <= 5) {
+            return 16;
+          } else {
+            return d.value * 4;
+          }
+        })
+        .attr("text-anchor", "middle")
+        .attr("dy", "10px")
+        .text((d) => d.data.name);
+    </script>
+  </body>
+</html>

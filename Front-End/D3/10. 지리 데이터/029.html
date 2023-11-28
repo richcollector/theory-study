@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+      path {
+        fill: #aaa;
+        stroke: black;
+        stroke-width: 1px;
+      }
+
+      path:hover {
+        fill: blue;
+      }
+
+      text {
+        fill: #555;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="canvas"></div>
+    <script>
+      // ref
+      // 공식문서 : https://github.com/d3/d3-geo/tree/v3.0.1#projections
+      // https://github.com/d3/d3-geo/tree/v3.0.1#paths
+      // https://github.com/d3/d3-geo/tree/v3.0.1#azimuthal-projections
+      // 지리 정보는 22년 4월 data입니다. 면 -> 읍 승격 등 연마다 변하는 data이니 아래 데이터를 확인해주세요.
+      // 통계청 통계지리정보서비스
+      // 대한민국 최신 행정구역(SHP) : http://www.gisdeveloper.co.kr/?p=2332
+      // 대한민국 행정동 경계(geojson) : https://github.com/vuski/admdongkor
+      // 대한민국 data 및 초기값 : https://myhappyman.tistory.com/97
+      const initialScale = 5500; //확대시킬 값
+      const initialX = -11900; //초기 위치값 X
+      const initialY = 4050; //초기 위치값 Y
+
+      console.dir(d3.geoPath());
+      const projection = d3
+        .geoMercator()
+        .scale(initialScale)
+        .translate([initialX, initialY]);
+
+      const svg = d3
+        .select(".canvas")
+        .append("svg")
+        .attr("width", 1000)
+        .attr("height", 1000);
+
+      const g = svg.append("g");
+
+      d3.json("data/korea.json").then((json) => {
+        console.log(json);
+
+        g.selectAll("path")
+          .data(json.features)
+          .enter()
+          .append("path")
+          .attr("d", d3.geoPath().projection(projection))
+          .attr("class", "countries");
+
+        // console.log(json.features[0].geometry.coordinates[0][1][0])
+        // console.log(json.features[0].geometry.coordinates[0][1][1])
+
+        g.selectAll("text")
+          .data(json.features)
+          .enter()
+          .append("text")
+          .attr("transform", (d) => {
+            let locate = d3.geoPath().projection(projection).centroid(d);
+            return `translate(${locate[0]}, ${locate[1]})`;
+          })
+          // .text(d => d.properties.adm_nm)
+          .text((d) => d.properties.name)
+          .attr("text-anchor", "middle");
+      });
+    </script>
+  </body>
+</html>

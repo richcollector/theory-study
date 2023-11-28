@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D3</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <div class="canvas">
+      <svg>
+        <path></path>
+        <path></path>
+        <path></path>
+        <path></path>
+        <path></path>
+        <path></path>
+        <path></path>
+        <path></path>
+      </svg>
+    </div>
+    <script>
+      // https://github.com/d3/d3-shape
+      // const f = d3.line().x().y().curve()의 형태로 선언
+      // f(data)의 형태로 사용
+
+      // 사용예
+      // const line = d3.line()
+      //                 .x(d => x(d.지역이름) + 15)
+      //                 .y(d => y(d.확진자수))
+      //                 .curve(d3.curveBasis)
+
+      // bars.enter()
+      //     .append('path')
+      //     .attr('fill', 'none')
+      //     .attr('stroke', 'blue')
+      //     .attr('stroke-width', '2px')
+      //     .attr('d', line(data))
+
+      data = [5, 15, 10, 20, 5, 10, 25, 15];
+      xfunction = (data, index) => index * 10;
+      yfunction = (data, index) => 100 - data;
+
+      const f = d3.line().x(xfunction).y(yfunction).curve(d3.curveStep);
+
+      // curves
+      // https://github.com/d3/d3-shape#curves
+
+      console.log(f(data));
+      const svg = d3.select("svg").attr("width", 500).attr("height", 500);
+
+      svg
+        .selectAll("path")
+        .attr("fill", "none")
+        .attr("stroke", "blue")
+        .attr("stroke-width", "2px")
+        .attr("d", f(data));
+    </script>
+  </body>
+</html>
