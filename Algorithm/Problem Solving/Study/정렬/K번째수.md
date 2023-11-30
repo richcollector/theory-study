@@ -31,7 +31,26 @@
 
 ```jsx
 function solution(array, commands) {
-  var answer = [];
-  return answer;
+  const arr = [];
+  for (let i = 0; i < commands.length; i++) {
+    const [a, b, c] = commands[i];
+    arr.push(array.slice(a - 1, b).sort((a, b) => a - b)[c - 1]);
+  }
+  return arr;
+}
+```
+
+```jsx
+function solution(array, commands) {
+  return commands.map((command) => {
+    const [sPosition, ePosition, position] = command;
+    const newArray = array
+      .filter(
+        (value, fIndex) => fIndex >= sPosition - 1 && fIndex <= ePosition - 1
+      )
+      .sort((a, b) => a - b);
+
+    return newArray[position - 1];
+  });
 }
 ```
