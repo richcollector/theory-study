@@ -19,5 +19,3 @@ for (let i = 0; i < N - K; i++) {
   }
 }
 console.log(answer);
-
-console.log(sumL);
