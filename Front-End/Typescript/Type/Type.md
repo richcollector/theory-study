@@ -1,4 +1,4 @@
-## Type
+## Typescript의 Type
 
 ### 타입 추론
 

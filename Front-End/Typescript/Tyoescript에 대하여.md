@@ -30,7 +30,7 @@ TypeScript의 정적 타입 기반, 즉 컴파일을 하는 과정에서 타입�
 
 기존의 JavaScript 프로젝트를 TypeScript로 전환하는 게 부담으로 느껴지는 경우에도 추가 기능이나 특정 기능에만 TypeScript를 도입하면서 프로젝트를 점진적으로 전환할 수 있어, 유용하게 활용할 수 있습니다.
 
-### Javsscript와의 차이
+### Javascript와의 차이
 
 #### 동적 타입 언어 VS 정적 타입 언어
 

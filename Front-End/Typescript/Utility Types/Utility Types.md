@@ -1,4 +1,4 @@
-## Utility Types
+## ypescript의 Utility Types
 
 아래의 기준이 되는 자료를 바탕으로 데이터를 골라올 수 있다.
 
