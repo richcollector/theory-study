@@ -18,6 +18,8 @@
 - 이 과정을 반복하면 결국 가장 우선순위가 높은 정점이 루트가 된다.
 - 완전 이진 트리의 높이는 logN이기에 힙의 요소 추가 알고리즘은 O(logN) 시간복잡도를 가진다.
 
+#### MaxHeap
+
 ```jsx
 class MaxHeap {
   constructor() {
@@ -99,6 +101,68 @@ console.log(array);
 // Result is [63, 54, 45, 36, 27] - Heap Sort!
 ```
 
-### 우선순위 큐
+#### MinHeap
 
-FIFO인 큐와 달리 우선 순위가 높은 요소가 먼저 나가는 큐
+```jsx
+class MinHeap {
+  constructor() {
+    this.heap = [null];
+  }
+
+  size() {
+    return this.heap.length - 1;
+  }
+
+  getMin() {
+    return this.heap[1] ? this.heap[1] : null;
+  }
+
+  swap(a, b) {
+    [this.heap[a], this.heap[b]] = [this.heap[b], this.heap[a]];
+  }
+
+  heappush(value) {
+    this.heap.push(value);
+    let curIdx = this.heap.length - 1;
+    let parIdx = (curIdx / 2) >> 0;
+
+    while (curIdx > 1 && this.heap[parIdx] > this.heap[curIdx]) {
+      this.swap(parIdx, curIdx);
+      curIdx = parIdx;
+      parIdx = (curIdx / 2) >> 0;
+    }
+  }
+
+  heappop() {
+    const min = this.heap[1];
+    if (this.heap.length <= 2) this.heap = [null];
+    else this.heap[1] = this.heap.pop();
+
+    let curIdx = 1;
+    let leftIdx = curIdx * 2;
+    let rightIdx = curIdx * 2 + 1;
+
+    if (!this.heap[leftIdx]) return min;
+    if (!this.heap[rightIdx]) {
+      if (this.heap[leftIdx] < this.heap[curIdx]) {
+        this.swap(leftIdx, curIdx);
+      }
+      return min;
+    }
+
+    while (
+      this.heap[leftIdx] < this.heap[curIdx] ||
+      this.heap[rightIdx] < this.heap[curIdx]
+    ) {
+      const minIdx =
+        this.heap[leftIdx] > this.heap[rightIdx] ? rightIdx : leftIdx;
+      this.swap(minIdx, curIdx);
+      curIdx = minIdx;
+      leftIdx = curIdx * 2;
+      rightIdx = curIdx * 2 + 1;
+    }
+
+    return min;
+  }
+}
+```
