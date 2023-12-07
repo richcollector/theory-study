@@ -14,7 +14,7 @@
 <summary>Basic</summary>
 
 - [Cookie, Session의 차이점](./Front-End/Basic/Cookie,%20Session/Cookie,%20Session.md)
-- [Localstorage, sessionstorage의 차이점](./Front-End/Basic/WebSotorage/저장소의%20차이점.md)
+- [Localstorage, Sessionstorage의 차이점](./Front-End/Basic/WebSotorage/저장소의%20차이점.md)
 
 </details>
 
@@ -46,7 +46,7 @@
 - [DNS](./Network/DNS/DNS%20서버.md)
 - [HTTP](./Network/HTTP,%20HTTPS/HTTP.md)
 - [HTTPS](./Network/HTTP,%20HTTPS/HTTPS.md)
-- [HTTP 1.1 VS HTTP 2](./Network/HTTP,%20HTTPS/HTTP%201.1%20vs%20HTTP%202.md)
+- [HTTP 1.1 VS HTTP 2](./Network/HTTP,%20HTTPS/!HTTP%201.1%20vs%20HTTP%202.md)
 - [Protocol](./Network/Protocol/Protocol.md)
 - [REST API](./Network/REST%20API/REST%20API.md)
 - [OSI 7계층과 TEC/IP 계층의 차이점](./Network/TCP,%20UDP/OSI%207계층과%20TCP,%20IP%20계층.md)
@@ -62,5 +62,33 @@
 
 <details open>
 <summary>Algorithm</summary>
+
+- [자료구조](./Algorithm/Basic/02.%20Data_Structure/Type.md)
+- [시간복잡도](./Algorithm/Basic/03.%20시간복잡도/BigO.md)
+- [배열](./Algorithm/Basic/05.%20배열/Aray.md)
+- [연결 리스트](./Algorithm/Basic/07.%20연결%20리스트/Linked_List.md)
+- [스택](./Algorithm/Basic/08.%20스택/Stack.md)
+- [큐](./Algorithm/Basic/09.%20큐/Queue.md)
+- [해시](./Algorithm/Basic/10.%20해시/HashTable.md)
+- [방향 그래프](./Algorithm/Basic/11.%20방향%20그래프/Graph.md)
+- [트리](./Algorithm/Basic/12.%20트리/Tree.md)
+- [힙](./Algorithm/Basic/13.%20힙/Heap.md)
+- [트라이](./Algorithm/Basic/14.%20트라이/Trie.md)
+- [이진탐색](./Algorithm/Basic/15.%20탐색/이진탐색/Search.md)
+- [완전탐색](./Algorithm/Basic/15.%20탐색/완전탐색/완전탐색.md)
+- [정렬](./Algorithm/Basic/16.%20%20정렬/Sort.md)
+- [BFS, DFS](./Algorithm/Basic/17.%20BFS,%20DFS/BFS,%20DFS.md)
+- [그리디](./Algorithm/Basic/18.%20그리디/그리디.md)
+- [Deque](./Algorithm/Basic/19.%20Deque/Deque.md)
+- [소수구하기](./Algorithm/Deep_Pratice/01.%20소수구하기/소수.md)
+- [재귀함수](./Algorithm/Deep_Pratice/02.%20재귀%20함수/재귀%20함수.md)
+  - [재귀 함수를 이용한 순열, 조합](./Algorithm/Deep_Pratice/02.%20재귀%20함수/재귀%20함수를%20이용한%20순열,%20조합.md)
+  - [재귀 함수를 이용한 트리 순회 알고리즘](./Algorithm/Deep_Pratice/02.%20재귀%20함수/재귀%20함수를%20이용한%20트리%20순회%20알고리즘.md)
+- [최단 경로 알고리즘](./Algorithm/Deep_Pratice/03.%20최단%20경로%20알고리즘/!최단%20경로%20알고리즘.md)
+- [최소 신장 트리](./Algorithm/Deep_Pratice/04.%20최소%20신장%20트리/!Kruskal%20알고리즘.md)
+- [투포인터](./Algorithm/Deep_Pratice/05.%20투포인터/!투포인터.md)
+- [백트래킹](./Algorithm/Deep_Pratice/06.%20백트래킹/!백트래킹.md)
+- [동적 계획법](./Algorithm/Deep_Pratice/07.%20동적%20계획법/!동적%20계획법.md)
+- [비트연산](./Algorithm/Deep_Pratice/08.%20비트연산/!비트마스크.md)
 
 </details>
