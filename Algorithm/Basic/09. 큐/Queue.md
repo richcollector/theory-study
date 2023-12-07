@@ -51,7 +51,7 @@ Linear Queue와 Circular Queue가 존재한다.
   Head는 Front가 되고, Tail은 Rear이 된다.
 
   ```jsx
-  class Mode {
+  class node {
     constructor(value) {
       this.value = value;
       this.next = null;
