@@ -25,11 +25,21 @@
 - [Reflow, Repaint가 실행되는 시점](./Front-End/Basic/브라우저의%20렌더링/Reflow,%20Repaint가%20실행되는%20시점.md)
 - [이스케이프 시퀀스](./Front-End/Basic/이스케이프%20시퀀스/Escape%20Squence.md)
 - [SPA, CSR, SSR, SSG의 차이](./Front-End/Basic/SPA,%20CSR,%20SSR,%20SSG/SPA,%20CSR,%20SSR,%20SSG의%20차이.md)
+- [Debouncing, Throttling을 통한 최적화](./Front-End/Basic/Debouncing,%20Throttling/)
 
 </details>
 
 <details open>
 <summary>Javascript</summary>
+
+</details>
+
+<details open>
+<summary>Typescript</summary>
+
+- [Typescript에 대하여](./Front-End/Typescript/Tyoescript에%20대하여.md)
+- [Type](./Front-End/Typescript/Type/Type.md)
+- [Utility Types](./Front-End/Typescript/Utility%20Types/Utility%20Types.md)
 
 </details>
 
@@ -44,15 +54,6 @@
   - [횡단 관심사](./Programming%20Paradigm/관점지향프로그래밍%20AOP/횡단%20관심사/횡단%20관심사.md)
 - [절차지향프로그래밍 POP](./Programming%20Paradigm/절차지향프로그래밍%20POP/POP.md)
 - [함수형프로그래밍 Functional](./Programming%20Paradigm/함수형프로그래밍%20Functional/Functional.md)
-
-</details>
-
-<details open>
-<summary>Typescript</summary>
-
-- [Typescript에 대하여](./Front-End/Typescript/Tyoescript에%20대하여.md)
-- [Type](./Front-End/Typescript/Type/Type.md)
-- [Utility Types](./Front-End/Typescript/Utility%20Types/Utility%20Types.md)
 
 </details>
 
