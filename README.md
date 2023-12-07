@@ -4,9 +4,19 @@
 
 보여주기식 지식이 아닌, 내용을 전부 이해합니다.
 
+조금 더 이해가 필요한 부분은 파일 앞에 !를 붙여 이해가 될 때까지 반복해서 보려고합니다.
+
 ---
 
 ### Frontend
+
+<details open>
+<summary>Basic</summary>
+
+- [Cookie, Session의 차이점](./Front-End/Basic/Cookie,%20Session/Cookie,%20Session.md)
+- [Localstorage, sessionstorage의 차이점](./Front-End/Basic/WebSotorage/저장소의%20차이점.md)
+
+</details>
 
 <details open>
 <summary>Javascript</summary>
@@ -31,6 +41,20 @@
 
 <details open>
 <summary>Network</summary>
+
+- [CDN](./Network/CDN/CDN.md)
+- [DNS](./Network/DNS/DNS%20서버.md)
+- [HTTP](./Network/HTTP,%20HTTPS/HTTP.md)
+- [HTTPS](./Network/HTTP,%20HTTPS/HTTPS.md)
+- [HTTP 1.1 VS HTTP 2](./Network/HTTP,%20HTTPS/HTTP%201.1%20vs%20HTTP%202.md)
+- [Protocol](./Network/Protocol/Protocol.md)
+- [REST API](./Network/REST%20API/REST%20API.md)
+- [OSI 7계층과 TEC/IP 계층의 차이점](./Network/TCP,%20UDP/OSI%207계층과%20TCP,%20IP%20계층.md)
+- [TCP와 UDP의 차이점](./Network/TCP,%20UDP/TCP,%20UDP.md)
+- [URL을 입력할 때 일어나는 과정](./Network/URL/URL을%20입력할%20때.md)
+- [URN은 URI와 URN을 포함](./Network/URL/URL과%20URN%20=%20URI.md)
+- [Web Server와 Was의 차이점](./Network/Web%20Server,%20Was/Web%20Server와%20Was.md)
+- [WebSocket](./Network/WebSocket/WebSocket.md)
 
 </details>
 

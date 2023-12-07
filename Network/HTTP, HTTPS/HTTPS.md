@@ -1,6 +1,6 @@
 ## HTTPS
 
-HTTPS(HyperText Transfer Protocol over TLS/SSL)는 기존의 HTTP를 암호화한 프로토콜 로 보안이 강화된 버전이다. 약어에서의 "S"가 원래 SSL(Secure Socket Layer)의 약자였지만 SSL 버전 3.1부터 TLS(Transport Layer Security)로 명칭이 바뀌고 TLS와 혼용하고 있다. TCP의 연결이 이루어진 후 TLS를 통해 암호화 설정이 되고 통신을 하는 방식이다.
+HTTPS(HyperText Transfer Protocol over TLS/SSL)는 기존의 HTTP를 암호화한 프로토콜로 보안이 강화된 버전이다. 약어에서의 "S"가 원래 SSL(Secure Socket Layer)의 약자였지만 SSL 버전 3.1부터 TLS(Transport Layer Security)로 명칭이 바뀌고 TLS와 혼용하고 있다. TCP의 연결이 이루어진 후 TLS를 통해 암호화 설정이 되고 통신을 하는 방식이다.
 
 ### 필요한 개념
 
