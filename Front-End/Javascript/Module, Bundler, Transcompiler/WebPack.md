@@ -2,8 +2,7 @@
 
 ### 프로젝트 설정하기
 
-yarn init -y로 리액트 프로젝트를 초기화하고,
-사용할 라이브러리들을 한번에 설치해준다.
+yarn init -y로 리액트 프로젝트를 초기화하고, 사용할 라이브러리들을 한번에 설치해줍니다.
 
 `yarn add -D @babel/core @babel/preset-env @babel/preset-react babel-loader clean-webpack-plugin css-loader html-loader html-webpack-plugin mini-css-extract-plugin node-sass react react-dom sass-loader style-loader webpack webpack-cli webpack-dev-server`
 
@@ -33,8 +32,8 @@ yarn init -y로 리액트 프로젝트를 초기화하고,
 
 ### 자바스크립트 파일 빌드하기
 
-src 하위 파일로 test.js 파일을 아래와 같이 작성해 준고, package.json 파일로 이동한 다음 build:webpack 스크립트를 추가한다.
-터미널에서 yarn build를 하게 되면, build 폴더에 bundle.js 파일을 볼 수 있다.
+src 하위 파일로 test.js 파일을 아래와 같이 작성해 주고, package.json 파일로 이동한 다음 build:webpack 스크립트를 추가합니다.
+터미널에서 yarn build를 하게 되면, build 폴더에 bundle.js 파일을 볼 수 있습니다.
 
 - 사용법
 
@@ -53,21 +52,21 @@ module.exports = {
 
 - entry
 
-  웹팩이 빌드할 파일을 알려주는 역할을 하고, src/test.js 파일 기준으로 import 되어 있는 모든 파일들을 찾아 하나의 파일로 합치게 된다.
+  웹팩이 빌드할 파일을 알려주는 역할을 하고, src/test.js 파일 기준으로 import 되어 있는 모든 파일들을 찾아 하나의 파일로 합치게 됩니다.
 
 - output
 
-  웹팩에서 빌드를 완료하면, output에 명시되어 있는 정보를 통해 빌드 파일을 생성한다.
+  웹팩에서 빌드를 완료하면, output에 명시되어 있는 정보를 통해 빌드 파일을 생성합니다.
 
 - mode
 
-  웹팩 빌드 옵션으로, production은 최적화되어 빌드되어지는 특징을 가지고, development는 빠르게 빌드하는 특징, none 같은 경우는 아무 기능 없이 웹팩으로 빌드한다.
+  웹팩 빌드 옵션으로, production은 최적화되어 빌드되어지는 특징을 가지고, development는 빠르게 빌드하는 특징, none 같은 경우는 아무 기능 없이 웹팩으로 빌드합니다.
 
 ### HTML 파일 빌드하기
 
-웹팩은 자바스크립트 파일뿐만 아니라 자바스크립트가 아닌 파일들도 모듈로 관리 할 수 있다.
-로더(loader)라는 기능으로 자바스크립트 파일이 아닌 파일을 웹팩이 이해할 수 있게 해준다.
-yarn build 명령어를 실행해 주면 다음과 같이 build/index.html 파일이 생성되어 있는 모습을 볼 수 있다.
+웹팩은 자바스크립트 파일뿐만 아니라 자바스크립트가 아닌 파일들도 모듈로 관리 할 수 있습니다.
+로더(loader)라는 기능으로 자바스크립트 파일이 아닌 파일을 웹팩이 이해할 수 있게 해줍니다.
+yarn build 명령어를 실행해 주면 다음과 같이 build/index.html 파일이 생성되어 있는 모습을 볼 수 있습니다.
 
 - 사용법
 
@@ -85,7 +84,7 @@ module : {
 }
 ```
 
-public 폴더에 index.html 파일을 만들어 주고, webpack.config.js 파일에 html 관련 코드를 추가해준다. 로더 설정으로 html 파일을 읽었을 때 html-loader를 실행하여 웹팩이 이해할 수 있게 하고 options로는 minimize 라는 코드 최적화 옵션을 사용하고 있다.
+public 폴더에 index.html 파일을 만들어 주고, webpack.config.js 파일에 html 관련 코드를 추가해줍니다. 로더 설정으로 html 파일을 읽었을 때 html-loader를 실행하여 웹팩이 이해할 수 있게 하고 options로는 minimize 라는 코드 최적화 옵션을 사용하고 있습니다.
 
 - index.html
 
@@ -138,11 +137,11 @@ module.exports = {
 };
 ```
 
-minimize 옵션이 켜져 있어서 파일 내용이 한줄로 되어 있고, minimize 옵션을 꺼주시면 줄바꿈된 형태로 보여진다. 또한 HtmlWebpackPlugin은 웹팩 빌드시 output에 있는 bundle.js를 자동으로 import 한다.
+minimize 옵션이 켜져 있어서 파일 내용이 한줄로 되어 있고, minimize 옵션을 꺼주시면 줄바꿈된 형태로 보여집니다. 또한 HtmlWebpackPlugin은 웹팩 빌드시 output에 있는 bundle.js를 자동으로 import 합니다.
 
 - html-webpack-plugin
 
-  웹팩이 html 파일을 읽어서 html 파일을 빌드할 수 있게 해준다.
+  웹팩이 html 파일을 읽어서 html 파일을 빌드할 수 있게 해줍니다.
 
 ### 리액트 빌드하기
 
@@ -167,7 +166,7 @@ export default Root;
 
 - .babelrc
 
-바벨 (babel)은 ES6에서 ES5로 자바스크립트를 변환해주는 역할을 한다. ES6와 리액트를 ES5로 변환할 수 있게 해준다는 내용입니다.
+바벨 (babel)은 ES6에서 ES5로 자바스크립트를 변환해주는 역할을 합니다. ES6와 리액트를 ES5로 변환할 수 있게 해준다는 내용입니다.
 
 ```jsx
 {
@@ -244,9 +243,9 @@ export default Root;
 
 - webpack.config.js
 
-  CSS를 읽을 수 있게 해주는 css-loader를 추가하고, 추출해서 파일로 저장하는 MiniCssExtractPlugin을 적용한다.
+  CSS를 읽을 수 있게 해주는 css-loader를 추가하고, 추출해서 파일로 저장하는 MiniCssExtractPlugin을 적용합니다.
 
-  use에 있는 loader 순서는 오른쪽에서 왼쪽 순서로 실행이 되고, css-loader로 css 파일을 읽고 MniCssExtractPlugin.loader로 읽은 CSS를 파일로 추출해 낸다.
+  use에 있는 loader 순서는 오른쪽에서 왼쪽 순서로 실행이 되고, css-loader로 css 파일을 읽고 MniCssExtractPlugin.loader로 읽은 CSS를 파일로 추출해 냅니다.
 
 ```jsx
 const path = require("path");
@@ -323,7 +322,8 @@ export default Root;
 ```
 
 - webpack.config.js
-  sass-loader를 추가하면, sass-loader로 scss 파일을 읽고 css로 변환한 후 css-loader로 css 읽는다. 그 후 MiniCssExtractPlugin으로 읽은 CSS를 파일로 추출한다.
+
+  sass-loader를 추가하면, sass-loader로 scss 파일을 읽고 css로 변환한 후 css-loader로 css 읽습니다. 그 후 MiniCssExtractPlugin으로 읽은 CSS를 파일로 추출합니다.
 
 ```jsx
 const path = require("path");
@@ -379,7 +379,7 @@ module.exports = {
 
 - webpack.config.js
 
-  webpack-dev-server 추가하여, 소스 코드를 수정할 때마다 알아서 웹팩이빌드해준다.
+  webpack-dev-server 추가하여, 소스 코드를 수정할 때마다 알아서 웹팩이 빌드해줍니다.
 
 ```jsx
 const path = require("path");
@@ -451,7 +451,7 @@ module.exports = {
 
   - filename을 style-test.css로 변경 후 빌드
 
-    여전히 안쓰이는 style.css가 있다.
+    여전히 안쓰이는 style.css가 있습니다.
 
   ```jsx
   plugins: [
@@ -488,11 +488,11 @@ module.exports = {
 
 ### 빌드 모드 나누기
 
-mode를 development, production 중에서 선택한 차이점이 있다. 추후에 맞는 플러그인들을 적용하면서 붙여나가기 시작하면 mode에 따라 강점들이 생긴다.
+mode를 development, production 중에서 선택한 차이점이 있습니다. 추후에 맞는 플러그인들을 적용하면서 붙여나가기 시작하면 mode에 따라 강점들이 생깁니다.
 
 - Development
 
-  빠르게 빌드하기 위해 빌드할 때 최적화를 안한다.
+  빠르게 빌드하기 위해 빌드할 때 최적화를 안합니다.
 
   - config/webpack.config.dev.js
 
@@ -555,7 +555,7 @@ mode를 development, production 중에서 선택한 차이점이 있다. 추후�
 
 - Production
 
-  빌드할 때 최적화 작업을 한다.
+  빌드할 때 최적화 작업을 합니다.
 
   - config/webpack.config.prod.js
 
