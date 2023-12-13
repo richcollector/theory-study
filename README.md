@@ -4,19 +4,30 @@
 
 보여주기식 지식이 아닌, 내용을 전부 이해합니다.
 
-조금 더 이해가 필요한 부분은 파일 앞에 !를 붙여 이해가 될 때까지 반복해서 보려고합니다.
+조금 더 이해가 필요한 부분은 목록이름 or 파일이름에 !를 붙여 이해가 될 때까지 반복해서 보려고합니다.
 
 ---
+
+### Design Pattern
+
+<details open>
+<summary>Basic</summary>
+
+- [!Flux Pattern](./Design-Pattern/Flux%20Pattern/Flux.md)
+
+</details>
 
 ### Frontend
 
 <details open>
 <summary>Basic</summary>
 
+- [Blob](./Front-End/Basic/Blob/Blob.md)
+  - [Binary](./Front-End/Basic/Blob/Binary.md)
 - [동기 vs 비동기](./Front-End/Basic/AsyncAwait,%20Callback,%20Promise/동기%20vs%20비동기.md)
-- [Callback](./Front-End/Basic/AsyncAwait,%20Callback,%20Promise/Callback.md)
-- [Promise](./Front-End/Basic/AsyncAwait,%20Callback,%20Promise/Promise.md)
-- [AsyncAwait](./Front-End/Basic/AsyncAwait,%20Callback,%20Promise/AsyncAwait.md)
+  - [Callback](./Front-End/Basic/AsyncAwait,%20Callback,%20Promise/Callback.md)
+  - [Promise](./Front-End/Basic/AsyncAwait,%20Callback,%20Promise/Promise.md)
+  - [AsyncAwait](./Front-End/Basic/AsyncAwait,%20Callback,%20Promise/AsyncAwait.md)
 - [Axios vs Fetch](./Front-End/Basic/AsyncAwait,%20Callback,%20Promise/Axios%20vs%20Fetch.md)
 - [Bom, Dom](./Front-End/Basic/Bom,%20Dom/Bom,%20Dom.md)
 - [Cookie, Session의 차이점](./Front-End/Basic/Cookie,%20Session/Cookie,%20Session.md)
@@ -32,6 +43,9 @@
 <details open>
 <summary>Javascript</summary>
 
+- [Primitive Type, Object Type](./Front-End/Javascript/Data%20type/Primitive%20Type,%20Object%20Type.md)
+- [!Symbol](./Front-End/Javascript/Data%20type/Symbol.md)
+- [Iterable, Iterator](./Front-End/Javascript/Data%20type/Iterable,%20Iterator.md)
 - [Garbage Collection](./Front-End/Javascript/Garbage%20Collection/Garbage%20Collection.md)
   - [Mark and Sweep Algorithm](./Front-End/Javascript/Garbage%20Collection/Mark%20and%20Sweep%20Algotithm.md)
 - [Bundler](./Front-End/Javascript/Module,%20Bundler,%20Transcompiler/Bundler.md)
@@ -54,12 +68,23 @@
 </details>
 
 <details open>
-<summary>React</summary>
+<summary>React.js</summary>
 
+- [!JSX](./Front-End/React/JSX/JSX.md)
+- [!Suspense](./Front-End/React/Suspense,%20ErrorBoundary/Suspense.md)
+- [!ErrorBoundary](./Front-End/React/Suspense,%20ErrorBoundary/ErrorBoundary.md)
+- [!Suspense + ErrorBoundary](./Front-End/React/Suspense,%20ErrorBoundary/Suspense%20+%20ErrorBoundary.md)
 - [export default, export](./Front-End/React/HOF,%20HOC/export%20default,%20export.md)
 - [HOF, HOC](./Front-End/React/HOF,%20HOC/HOF,%20HOC.md)
 - [클래스 컴포넌트 vs 함수 컴포넌트](./Front-End/React/클래스%20컴포넌트%20vs%20함수%20컴포넌트/클래스%20컴포넌트%20vs%20함수%20컴포넌트.md)
 - [폴더구조 패턴](./Front-End/React/폴더구조%20패턴/폴더구조%20패턴.md)
+
+</details>
+
+<details open>
+<summary>Next.js</summary>
+
+- [document.js vs \_app.js](./Front-End/Next.js/document.js%20vs%20_app.js/document.js%20vs%20_app.js.md)
 
 </details>
 
@@ -94,8 +119,8 @@
 - [CDN](./Network/CDN/CDN.md)
 - [DNS](./Network/DNS/DNS%20서버.md)
 - [HTTP](./Network/HTTP,%20HTTPS/HTTP.md)
-- [HTTPS](./Network/HTTP,%20HTTPS/HTTPS.md)
-- [HTTP 1.1 VS HTTP 2](./Network/HTTP,%20HTTPS/!HTTP%201.1%20vs%20HTTP%202.md)
+- [!HTTPS](./Network/HTTP,%20HTTPS/HTTPS.md)
+- [!HTTP 1.1 VS HTTP 2](./Network/HTTP,%20HTTPS/HTTP%201.1%20vs%20HTTP%202.md)
 - [Protocol](./Network/Protocol/Protocol.md)
 - [REST API](./Network/REST%20API/REST%20API.md)
 - [OSI 7계층과 TEC/IP 계층의 차이점](./Network/TCP,%20UDP/OSI%207계층과%20TCP,%20IP%20계층.md)
@@ -133,12 +158,12 @@
 - [재귀함수](./Algorithm/Deep_Pratice/02.%20재귀%20함수/재귀%20함수.md)
   - [재귀 함수를 이용한 순열, 조합](./Algorithm/Deep_Pratice/02.%20재귀%20함수/재귀%20함수를%20이용한%20순열,%20조합.md)
   - [재귀 함수를 이용한 트리 순회 알고리즘](./Algorithm/Deep_Pratice/02.%20재귀%20함수/재귀%20함수를%20이용한%20트리%20순회%20알고리즘.md)
-- [최단 경로 알고리즘](./Algorithm/Deep_Pratice/03.%20최단%20경로%20알고리즘/!최단%20경로%20알고리즘.md)
-- [최소 신장 트리](./Algorithm/Deep_Pratice/04.%20최소%20신장%20트리/!Kruskal%20알고리즘.md)
-- [투포인터](./Algorithm/Deep_Pratice/05.%20투포인터/!투포인터.md)
-- [백트래킹](./Algorithm/Deep_Pratice/06.%20백트래킹/!백트래킹.md)
-- [동적 계획법](./Algorithm/Deep_Pratice/07.%20동적%20계획법/!동적%20계획법.md)
-- [비트연산](./Algorithm/Deep_Pratice/08.%20비트연산/!비트마스크.md)
+- [!최단 경로 알고리즘](./Algorithm/Deep_Pratice/03.%20최단%20경로%20알고리즘/최단%20경로%20알고리즘.md)
+- [!최소 신장 트리](./Algorithm/Deep_Pratice/04.%20최소%20신장%20트리/Kruskal%20알고리즘.md)
+- [!투포인터](./Algorithm/Deep_Pratice/05.%20투포인터/투포인터.md)
+- [!백트래킹](./Algorithm/Deep_Pratice/06.%20백트래킹/백트래킹.md)
+- [!동적 계획법](./Algorithm/Deep_Pratice/07.%20동적%20계획법/동적%20계획법.md)
+- [!비트연산](./Algorithm/Deep_Pratice/08.%20비트연산/비트마스크.md)
 
 </details>
 
