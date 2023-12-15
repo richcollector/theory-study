@@ -85,6 +85,7 @@
 <summary>Next.js</summary>
 
 - [document.js vs \_app.js](./Front-End/Next.js/document.js%20vs%20_app.js/document.js%20vs%20_app.js.md)
+- [Next.js에 대하여](./Front-End/Next.js/Next.js.md)
 
 </details>
 
@@ -129,6 +130,16 @@
 - [URN은 URI와 URN을 포함](./Network/URL/URL과%20URN%20=%20URI.md)
 - [Web Server와 Was의 차이점](./Network/Web%20Server,%20Was/Web%20Server와%20Was.md)
 - [WebSocket](./Network/WebSocket/WebSocket.md)
+
+</details>
+
+### Operating-System
+
+<details open>
+<summary>Operating-System</summary>
+
+- [Context Switch](./Operating-System/Context%20Switch/Context%20Switch.md)
+- [프로세스와 스레드의 차이점](./Operating-System/프로세스,%20스레드/프로세스와%20스레드의%20차이점.md)
 
 </details>
 
