@@ -36,7 +36,14 @@
 - [Reflow, Repaint가 실행되는 시점](./Front-End/Basic/브라우저의%20렌더링/Reflow,%20Repaint가%20실행되는%20시점.md)
 - [이스케이프 시퀀스](./Front-End/Basic/이스케이프%20시퀀스/Escape%20Squence.md)
 - [SPA, CSR, SSR, SSG의 차이](./Front-End/Basic/SPA,%20CSR,%20SSR,%20SSG/SPA,%20CSR,%20SSR,%20SSG의%20차이.md)
-- [Debouncing, Throttling을 통한 최적화](./Front-End/Basic/Debouncing,%20Throttling/)
+- [성능점검](./Front-End/Basic/성능%20최적화/성능%20점검.md)
+  - [성능 점검 전에 알면 좋을 것](./Front-End/Basic/성능%20최적화/성능%20최적화%20전에%20알면%20좋을%20것.md)
+  - [Dynamic Import](./Front-End/Basic/성능%20최적화/Dynamic%20Import/Dynamic%20Import.md)
+  - [Image Upload](./Front-End/Basic/성능%20최적화/Image/이미지%20업로드.md)
+  - [임시 URL](./Front-End/Basic/성능%20최적화/Image/임시%20URL.md)
+  - [Layout Shift](./Front-End/Basic/성능%20최적화/Layout%20Shift/Layout%20Shift.md)
+  - [Optimistic UI](./Front-End/Basic/성능%20최적화/Optimistic%20UI/Optimistic%20UI.md)
+  - [Debouncing, Throttling을 통한 최적화](./Front-End/Basic/Debouncing,%20Throttling/)
 
 </details>
 
@@ -78,6 +85,7 @@
 - [HOF, HOC](./Front-End/React/HOF,%20HOC/HOF,%20HOC.md)
 - [클래스 컴포넌트 vs 함수 컴포넌트](./Front-End/React/클래스%20컴포넌트%20vs%20함수%20컴포넌트/클래스%20컴포넌트%20vs%20함수%20컴포넌트.md)
 - [폴더구조 패턴](./Front-End/React/폴더구조%20패턴/폴더구조%20패턴.md)
+- [GraphQl](./Front-End/React/State%20Management/GraphQl/GraphQl에%20대하여.md)
 
 </details>
 
@@ -140,6 +148,7 @@
 
 - [Context Switch](./Operating-System/Context%20Switch/Context%20Switch.md)
 - [프로세스와 스레드의 차이점](./Operating-System/프로세스,%20스레드/프로세스와%20스레드의%20차이점.md)
+- [Linux 환경에서 개발](./Operating-System/Linux%20환경에서%20개발/Linux%20환경에서%20개발.md)
 
 </details>
 
