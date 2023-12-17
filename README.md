@@ -62,6 +62,7 @@
 - [자바스크립트 엔진](./Front-End/Javascript/Engine/자바스크립트%20엔진.md)
 - [콜 스택과 힙](./Front-End/Javascript/Engine/콜%20스택과%20힙.md)
 - [이벤트루프](./Front-End/Javascript/이벤트루프/이벤트루프.md)
+- [jQuery](./Front-End/Javascript/jQuery/jQuery.md)
 
 </details>
 
@@ -196,5 +197,6 @@
 - [Encryption](./Security/Encryption/Encryption.md)
 - [CSRF](./Security/CSRF/CSRF.md)
 - [XSS](./Security/XSS/XSS.md)
+- [SQL Injection](./Security/SQL%20Injection/SQL%20Injection.md)
 
 </details>
