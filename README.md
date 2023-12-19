@@ -69,6 +69,8 @@
 - [콜 스택과 힙](./Front-End/Javascript/Engine/콜%20스택과%20힙.md)
 - [이벤트루프](./Front-End/Javascript/이벤트루프/이벤트루프.md)
 - [jQuery](./Front-End/Javascript/jQuery/jQuery.md)
+- [WebGL](./Front-End/WebGL/WebGL.md)
+  - [three.js](./Front-End/WebGL/three.js/three.js.md)
 
 </details>
 
@@ -211,5 +213,16 @@
 - [CSRF](./Security/CSRF/CSRF.md)
 - [XSS](./Security/XSS/XSS.md)
 - [SQL Injection](./Security/SQL%20Injection/SQL%20Injection.md)
+
+</details>
+
+### ETC
+
+<details open>
+<summary>ETC</summary>
+
+- [Digital Twin](./ETC/Digital%20Twin/Digital%20Twin.md)
+- [GIS](./ETC/GIS/GIS.md)
+- [Metaverse](./ETC/Metaverse/Metaverse.md)
 
 </details>
