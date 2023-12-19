@@ -14,6 +14,7 @@
 <summary>Basic</summary>
 
 - [!Flux Pattern](./Design-Pattern/Flux%20Pattern/Flux.md)
+- [Singleton pattern](./Design-Pattern/Singleton%20pattern/Singleton%20pattern.md)
 
 </details>
 
@@ -56,11 +57,11 @@
 - [Iterable, Iterator](./Front-End/Javascript/Data%20type/Iterable,%20Iterator.md)
 - [Garbage Collection](./Front-End/Javascript/Garbage%20Collection/Garbage%20Collection.md)
   - [Mark and Sweep Algorithm](./Front-End/Javascript/Garbage%20Collection/Mark%20and%20Sweep%20Algotithm.md)
-- [Bundler](./Front-End/Javascript/Module,%20Bundler,%20Transcompiler/Bundler.md)
-  - [Module](./Front-End/Javascript/Module,%20Bundler,%20Transcompiler/Module.md)
+- [!Bundler](./Front-End/Javascript/Module,%20Bundler,%20Transcompiler/Bundler.md)
+  - [!Module](./Front-End/Javascript/Module,%20Bundler,%20Transcompiler/Module.md)
   - [WebPack](./Front-End/Javascript/Module,%20Bundler,%20Transcompiler/WebPack.md)
   - [Vite](./Front-End/Javascript/Module,%20Bundler,%20Transcompiler/Vite.md)
-- [자바스크립트 엔진](./Front-End/Javascript/Engine/자바스크립트%20엔진.md)
+- [!자바스크립트 엔진](./Front-End/Javascript/Engine/자바스크립트%20엔진.md)
 - [콜 스택과 힙](./Front-End/Javascript/Engine/콜%20스택과%20힙.md)
 - [이벤트루프](./Front-End/Javascript/이벤트루프/이벤트루프.md)
 - [jQuery](./Front-End/Javascript/jQuery/jQuery.md)
