@@ -43,9 +43,13 @@
   - [Dynamic Import](./Front-End/Basic/성능%20최적화/Dynamic%20Import/Dynamic%20Import.md)
   - [Image Upload](./Front-End/Basic/성능%20최적화/Image/이미지%20업로드.md)
   - [임시 URL](./Front-End/Basic/성능%20최적화/Image/임시%20URL.md)
+  - [!Image Size](./Front-End/Basic/성능%20최적화/Image/이미지%20사이즈.md)
   - [Layout Shift](./Front-End/Basic/성능%20최적화/Layout%20Shift/Layout%20Shift.md)
   - [Optimistic UI](./Front-End/Basic/성능%20최적화/Optimistic%20UI/Optimistic%20UI.md)
   - [Debouncing, Throttling을 통한 최적화](./Front-End/Basic/Debouncing,%20Throttling/)
+- [CORS](./Front-End/Basic/CORS/CORS.md)
+- [변수의 생명주기](./Front-End/Basic/변수의%20생명주기/변수의%20생명주기.md)
+- [!MIME-Type](./Front-End/Basic/MIME-Type/MIME-Type.md)
 
 </details>
 
