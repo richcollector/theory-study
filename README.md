@@ -33,7 +33,9 @@
   - [!Axios vs Fetch](./Front-End/Basic/AsyncAwait,%20Callback,%20Promise,%20Observable/Axios%20vs%20Fetch.md)
 - [Bom, Dom](./Front-End/Basic/Bom,%20Dom/Bom,%20Dom.md)
 - [Cookie, Session의 차이점](./Front-End/Basic/Cookie,%20Session/Cookie,%20Session.md)
-- [Localstorage, Sessionstorage의 차이점](./Front-End/Basic/WebStorage/저장소의%20차이점.md)
+- [Cache](./Front-End/Basic/Cache/Cache.md)
+  - [Cache Storage](./Front-End/Basic/Cache/Cache%20Storage.md)
+  - [Localstorage, Sessionstorage의 차이점](./Front-End/Basic/WebStorage/저장소의%20차이점.md)
 - [렌더링 원리](./Front-End/Basic/브라우저의%20렌더링/렌더링%20원리.md)
 - [Reflow, Repaint가 실행되는 시점](./Front-End/Basic/브라우저의%20렌더링/Reflow,%20Repaint가%20실행되는%20시점.md)
 - [이스케이프 시퀀스](./Front-End/Basic/이스케이프%20시퀀스/Escape%20Squence.md)
@@ -175,6 +177,7 @@
 - [Context Switch](./Operating-System/Context%20Switch/Context%20Switch.md)
 - [프로세스와 스레드의 차이점](./Operating-System/프로세스,%20스레드/프로세스와%20스레드의%20차이점.md)
 - [Linux 환경에서 개발](./Operating-System/Linux%20환경에서%20개발/Linux%20환경에서%20개발.md)
+  - [윈도우에 리눅스 개발 환경 구축하기](./Operating-System/Linux%20환경에서%20개발/윈도우에%20리눅스%20개발%20환경%20구축하기.md)
 
 </details>
 
