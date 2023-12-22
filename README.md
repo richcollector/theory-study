@@ -23,6 +23,8 @@
 <details open>
 <summary>Basic</summary>
 
+- [인증 vs 인가](./Front-End/Basic/인증%20vs%20인가/인증%20vs%20인가.md)
+- [SOLID원칙](./Front-End/Basic/SOLID%20원칙/SOLID.md)
 - [웹표준과 접근성](./Front-End/Basic/웹표준과%20접근성/웹표준과%20접근성.md)
 - [Blob](./Front-End/Basic/Blob/Blob.md)
   - [Binary](./Front-End/Basic/Blob/Binary.md)
@@ -129,6 +131,15 @@
 <summary>CSS</summary>
 
 - [CSS-in-JS vs CSS-in-CSS](./Front-End/CSS/CSS-in-JS%20vs%20CSS-in-CSS/CSS-in-JS%20vs%20CSS-in-CSS.md)
+
+</details>
+
+### DevOps
+
+<details open>
+<summary>DevOps</summary>
+
+- [DevOps](./DevOps/DevOps.md)
 
 </details>
 
