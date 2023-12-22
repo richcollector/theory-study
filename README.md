@@ -141,6 +141,15 @@
 
 - [DevOps](./DevOps/DevOps.md)
 
+### Git
+
+- [GitHub 사용법](./DevOps/GIT/GitHub/GitHub%20사용법.md)
+  - [Commit Convention](./DevOps/GIT/GitHub/Commit%20Convention/Convention.md)
+  - [README.md](./DevOps/GIT/GitHub/README.md/작성법.md)
+  - [상태정리](./DevOps/GIT/GitHub/상태정리/3가지%20영역과%203가지%20상태.md)
+  - [!Rebase와 Squash](./DevOps/GIT/GitHub/Rebase와%20Squash/Rebase와%20Squash.md)
+  - [CI, CD](./DevOps/GIT/GitHub/CI,%20CD/CI,%20CD와%20GitHub%20Action.md)
+
 </details>
 
 ### Programming Paradigm

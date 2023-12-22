@@ -20,6 +20,7 @@ GeoServer(지오서버)는 지리공간 데이터를 공유하고 편집할 수 
 ### DB
 
 - PostgreSQL
+
   무료로 사용할 수 있으며 많은 사용량으로 인해 검증된 DB이기 때문에 사용에 무리가 없습니다. 게다가 Refractions Research에서 개방형 공간데이터베이스인 PostGIS를 만들어 배포하였기 때문에 GeoServer와 PostgreSQL의 궁합이 향상되었습니다.
 
 - PostGIS
