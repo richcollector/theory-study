@@ -117,3 +117,4 @@ MIME으로 인코딩한 파일은 Content-type정보를 앞부분에 담게되�
 ### 참고자료
 
 - [MIME-Type,Content-Type이란?](https://juyoung-1008.tistory.com/m/4)
+- [MIME type이란?](https://velog.io/@aerirang647/MIME-type%EC%9D%B4%EB%9E%80)
