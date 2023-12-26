@@ -1,0 +1,26 @@
+.box1 {
+  height: 400px;
+  background-color: red;
+  float: left;
+}
+
+.box2 {
+  height: 200px;
+  background-color: blue;
+  float: right;
+}
+
+.box {
+  box-sizing: border-box;
+  width: 300px;
+  padding: 20px;
+}
+
+/* .box3 {
+    clear: both;
+} */
+
+/* clearfix라고 이름을 붙이는게 관례*/
+.clearfix {
+  clear: both;
+}

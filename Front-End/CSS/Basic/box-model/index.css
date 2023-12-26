@@ -8,12 +8,12 @@
     margin: 50px;
 } */
 div {
-    width: 200px;
-    heigh: 200px;
-    background: lightgrey;
+  width: 200px;
+  height: 200px;
+  background: lightgrey;
 }
 
 .box1 {
-    padding: 50px;
-    border: 1px solid blue;
+  padding: 50px;
+  border: 1px solid blue;
 }
