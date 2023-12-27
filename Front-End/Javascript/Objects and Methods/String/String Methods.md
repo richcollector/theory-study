@@ -1,5 +1,183 @@
 ## String
 
+문자열(문자의 나열)의 생성자입니다.
+
+- 사용법
+
+  String(thing);
+
+```jsx
+var s_prim = "foo";
+var s_obj = new String(s_prim);
+
+console.log(typeof s_prim); // Logs "string"
+console.log(typeof s_obj); // Logs "object"
+```
+
+```jsx
+var s1 = "2 + 2"; // creates a string primitive
+var s2 = new String("2 + 2"); // creates a String object
+console.log(eval(s1)); // returns the number 4
+console.log(eval(s2)); // returns the string "2 + 2"
+```
+
+### String.prototype.matchAll()
+
+캡처 그룹을 포함하여 정규 표현식, String과 비교하여 이 문자열과 일치하는 모든 결과의 반복자를 반환합니다.
+
+- 사용법
+  matchAll(regexp)
+
+  - 매개변수
+
+    - regexp
+
+      정규식 개체 또는 Symbol.matchAll메서드가 있는 개체입니다.
+
+      regexp가 객체 가 아니고 RegExp메서드도 없는 경우 를 사용하여 Symbol.matchAll암시적으로 로 변환됩니다 .RegExpnew RegExp(regexp, 'g')
+
+      regexp 가 regex인 경우 전역( g) 플래그가 설정되어 있어야 하며 그렇지 않으면 a가 TypeError발생합니다.
+
+```jsx
+const regexp = /foo[a-z]*/g;
+const str = "table football, foosball";
+let match;
+
+while ((match = regexp.exec(str)) !== null) {
+  console.log(
+    `Found ${match[0]} start=${match.index} end=${regexp.lastIndex}.`
+  );
+}
+// Found football start=6 end=14.
+// Found foosball start=16 end=24.
+```
+
+### String.prototype.match()
+
+문자열이 정규식과 매치되는 부분을 검색합니다.
+
+- 사용법
+
+  str.match(regexp);
+
+  - 매개변수
+
+    - regexp
+
+      정규식 개체입니다. RegExp가 아닌 객체 obj가 전달되면, new RegExp(obj)를 사용하여 암묵적으로 RegExp로 변환됩니다. 매개변수를 전달하지 않고 match()를 사용하면, 빈 문자열:[""]이 있는 Array가 반환됩니다.
+
+```jsx
+var str = "For more information, see Chapter 3.4.5.1";
+var re = /see (chapter \d+(\.\d)*)/i;
+var found = str.match(re);
+
+console.log(found);
+
+// logs [ 'see Chapter 3.4.5.1',
+//        'Chapter 3.4.5.1',
+//        '.1',
+//        index: 22,
+//        input: 'For more information, see Chapter 3.4.5.1' ]
+
+// 'see Chapter 3.4.5.1'는 완전한 매치 상태임.
+// 'Chapter 3.4.5.1'는 '(chapter \d+(\.\d)*)' 부분에 의해 발견된 것임.
+// '.1' 는 '(\.\d)'를 통해 매치된 마지막 값임.
+// 'index' 요소가 (22)라는 것은 0에서부터 셀 때 22번째 위치부터 완전 매치된 문자열이 나타남을 의미함.
+// 'input' 요소는 입력된 원래 문자열을 나타냄.
+```
+
+### String.prototype.toString()
+
+객체의 문자열 표현을 반환합니다.
+
+- 사용법
+
+  toString();
+
+```jsx
+var x = new String("Hello world");
+
+console.log(x.toString()); // logs 'Hello world'
+```
+
+- 2진수로 변경하는 방법
+
+```jsx
+let baseTenInt = 10;
+console.log(baseTenInt.toString(2));
+// "1010"이 출력됩니다
+```
+
+### String.prototype.localeCompare()
+
+참조 문자열이 정렬 순으로 지정된 문자열 앞 혹은 뒤에 오는지 또는 동일한 문자열인지 나타내는 수치를 반환합니다.
+
+- 사용법
+
+  localeCompare(compareString);
+  localeCompare(compareString, locales);
+  localeCompare(compareString, locales, options);
+
+  - 매개변수
+
+    - compareString
+
+      referenceStr가 비교되는 문자열.
+
+    - locales와 options
+
+      이러한 인수는 함수의 동작을 사용자 정의하여 응용 프로그램에서 포맷 규칙을 사용할 언어를 지정합니다. "locales"와 "options"의 인자를 무시하는 구현에서는 사용되는 로케일과 반환되는 문자열의 형식은 완전히 구현에 의존합니다. 매개변수의 상세 및 사용 방법은 Intl.Collator() constructor (en-US)를 참조하세요.
+
+  - 반환 값
+
+    compareString 전에 referenceStr가 위치하는 경우 음수, compareString 후에 referenceStr가 위치하는 경우 양수, 동등할 경우 0이 됩니다.
+
+```jsx
+// "a"는 "c" 전에 위치하므로 음수 값을 반환
+"a".localeCompare("c"); // -2 혹은 -1 (또는 다른 음수 값)
+
+// 알파벳 순으로 단어 "check"는 "against"보다 뒤에 위치하므로 양수 값을 반환
+"check".localeCompare("against"); // 2 혹은 1 (또는 다른 양수 값)
+
+// "a"와 "a"는 서로 동등하므로 중립 값 0을 반환
+"a".localeCompare("a"); // 0
+```
+
+```jsx
+let items = ["réservé", "Premier", "Cliché", "communiqué", "café", "Adieu"];
+items.sort((a, b) => a.localeCompare(b, "fr", { ignorePunctuation: true }));
+// ['Adieu', 'café', 'Cliché', 'communiqué', 'Premier', 'réservé']
+```
+
+### String.prototype.lastIndexOf()
+
+진 값과 일치하는 부분을 fromIndex로부터 역순으로 탐색하여, 최초로 마주치는 인덱스를 반환합니다. 일치하는 부분을 찾을 수 없으면 -1을 반환합니다.
+
+- 사용법
+
+  str.lastIndexOf(searchValue[, fromIndex])
+
+  - 매개변수
+
+    - searchValue
+
+    탐색할 문자열. 빈 값을 제공할 경우 fromIndex를 반환합니다.
+
+    - fromIndex (Optional)
+
+    탐색의 시작점으로 사용할 인덱스. 기본값은 +Infinity입니다. fromIndex >= str.length인 경우 모든 문자열을 탐색합니다. fromIndex < 0인 경우엔 0을 지정한 것과 동일합니다.
+
+```jsx
+"canal".lastIndexOf("a"); //  3 반환
+"canal".lastIndexOf("a", 2); //  1 반환
+"canal".lastIndexOf("a", 0); // -1 반환
+"canal".lastIndexOf("x"); // -1 반환
+"canal".lastIndexOf("c", -5); //  0 반환
+"canal".lastIndexOf("c", 0); //  0 반환
+"canal".lastIndexOf(""); //  5 반환
+"canal".lastIndexOf("", 2); //  2 반환
+```
+
 ### String.prototype.charCodeAt()
 
 지정된 인덱스에서 UTF-16 코드 단위를 나타내는 정수 String를 반환합니다 .

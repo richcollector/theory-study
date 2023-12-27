@@ -25,7 +25,7 @@ Webpack에서 Vite로 넘어가야 될 가장 핵심적인 이유가 바로 이 
 
   ![](./Bundle_Esm.png)
 
-또한 Vite는 개발시 내용이 자주 바뀌지 않을 Dependencies 모듈을 사전 번들링하는데 esbuild를 사용합니다. **esbuild는 Go언어로 만들어졌으며 다른 JavaScript기반의 번들러보다 10 ~ 100배 빠른 속도를 가지고 있는 번들러**입니다.
+**또한 Vite는 개발시 내용이 자주 바뀌지 않을 Dependencies 모듈을 사전 번들링하는데 esbuild를 사용합니다. esbuild는 Go언어로 만들어졌으며 다른 JavaScript기반의 번들러보다 10 ~ 100배 빠른 속도를 가지고 있는 번들러**입니다.
 
 esbuild를 이용한 사전 번들링과 Native ESM 기반의 Dev Server로 인해 서버 구동속도와 HMR 속도가 엄청나게 빨라졌습니다.
 

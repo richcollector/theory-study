@@ -35,6 +35,151 @@ console.log(0 in arrayEmpty); // false
 console.log(1 in arrayEmpty); // false
 ```
 
+### Array.prototype.flatMap()
+
+- 사용법
+  flatMap(callbackFn)
+  flatMap(callbackFn, thisArg)
+
+  - 매개변수
+    callback
+    배열의 각 요소에 대해 실행할 함수입니다. 새 배열의 새 요소를 포함하는 배열을 반환하거나, 새 배열에 추가할 배열이 아닌 단일 값을 반환해야 합니다. 이 함수는 다음 인수를 사용하여 호출됩니다.
+
+    element
+    배열에서 처리 중인 현재 요소.
+
+    index
+    배열에서 처리 중인 현재 요소의 인덱스.
+
+    array
+    flatMap()이 호출된 배열.
+
+    thisArg Optional
+    callbackFn을 실행할 때 this로 사용할 값입니다. 순회 메서드를 참조하세요.
+
+### Array.prototype.some()
+
+배열 안의 어떤 요소라도 주어진 판별 함수를 적어도 하나라도 통과하는지 테스트합니다. 만약 배열에서 주어진 함수가 true을 반환하면 true를 반환합니다. 그렇지 않으면 false를 반환합니다. 이 메서드는 배열을 변경하지 않습니다.
+
+- 사용법
+
+```jsx
+// 화살표 함수
+some((element) => {
+  /* … */
+});
+some((element, index) => {
+  /* … */
+});
+some((element, index, array) => {
+  /* … */
+});
+
+// 콜백 함수
+some(callbackFn);
+some(callbackFn, thisArg);
+
+// 인라인 콜백 함수
+some(function (element) {
+  /* … */
+});
+some(function (element, index) {
+  /* … */
+});
+some(function (element, index, array) {
+  /* … */
+});
+some(function (element, index, array) {
+  /* … */
+}, thisArg);
+```
+
+- 매개변수
+
+  - callbackFn
+
+    배열의 각 요소에 대해 실행할 함수. 이 함수는 요소가 시험을 통과하면 참 같은 값을 반환하며, 그렇지 않으면 거짓인 값을 반환합니다.
+    다음의 인자와 함께 함수를 호출합니다.
+
+  - element
+
+    처리할 배열 내 현재 요소
+
+  - index
+
+    처리할 현재 요소의 인덱스
+
+  - array
+
+    some을 호출한 배열
+
+- thisArg Optional
+
+  callbackFn을 실행할 때 this로 사용하는 값. 반복 메소드를 참고하세요.
+
+```jsx
+function isBiggerThan10(element, index, array) {
+  return element > 10;
+}
+
+[2, 5, 8, 1, 4].some(isBiggerThan10); // false
+[12, 5, 8, 1, 4].some(isBiggerThan10); // true
+```
+
+### Array.prototype.splice()
+
+배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경합니다.
+
+- 사용법
+
+  array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+
+  - 매개변수
+
+    - start
+
+      배열의 변경을 시작할 인덱스입니다. 배열의 길이보다 큰 값이라면 실제 시작 인덱스는 배열의 길이로 설정됩니다. 음수인 경우 배열의 끝에서부터 요소를 세어나갑니다(원점 -1, 즉 -n이면 요소 끝의 n번째 요소를 가리키며 array.length - n번째 인덱스와 같음). 값의 절대값이 배열의 길이 보다 큰 경우 0으로 설정됩니다.
+
+    - deleteCount (Optional)
+
+      배열에서 제거할 요소의 수입니다. deleteCount를 생략하거나 값이 array.length - start보다 크면 start부터의 모든 요소를 제거합니다. deleteCount가 0 이하라면 어떤 요소도 제거하지 않습니다. 이 때는 최소한 하나의 새로운 요소를 지정해야 합니다.
+
+    - item1, item2, <em>...</em> (Optional)
+
+      배열에 추가할 요소입니다. 아무 요소도 지정하지 않으면 splice()는 요소를 제거하기만 합니다.
+
+```jsx
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
+var removed = myFish.splice(2, 0, "drum");
+
+// myFish is ["angel", "clown", "drum", "mandarin", "sturgeon"]
+// removed is [], no elements removed
+```
+
+```jsx
+var myFish = ["angel", "clown", "drum", "sturgeon"];
+var removed = myFish.splice(2, 1, "trumpet");
+
+// myFish is ["angel", "clown", "trumpet", "sturgeon"]
+// removed is ["drum"]
+```
+
+### Array.prototype.keys()
+
+배열의 각 인덱스를 키 값으로 가지는 새로운 Array Iterator 객체를 반환합니다.
+
+- 사용법
+
+  arr.keys();
+
+```jsx
+var arr = ["a", , "c"];
+var sparseKeys = Object.keys(arr);
+var denseKeys = [...arr.keys()];
+console.log(sparseKeys); // ['0', '2']
+console.log(denseKeys); // [0, 1, 2]
+```
+
 ### Array.prototype.slice()
 
 어떤 배열의 begin 부터 end 까지(end 미포함)에 대한 얕은 복사본을 새로운 배열 객체로 반환합니다. 원본 배열은 바뀌지 않습니다.
@@ -107,6 +252,14 @@ console.log("newCar[0].color = " + newCar[0].color);
   - thisArg Optional
 
     callbackFn을 실행할 때 this로 사용하는 값. 순회 메서드를 참조하세요.
+
+```jsx
+function isBigEnough(element, index, array) {
+  return element >= 10;
+}
+[12, 5, 8, 130, 44].every(isBigEnough); // false
+[12, 54, 18, 130, 44].every(isBigEnough); // true
+```
 
 ### Array.prototype.pop()
 
@@ -386,6 +539,21 @@ console.log(numbers);
 
 이 때 reduce()가 결과로 반환하는 값은 20입니다.
 
+객체 배열에서의 값 합산 하는 법
+
+```jsx
+var initialValue = 0;
+var sum = [{ x: 1 }, { x: 2 }, { x: 3 }].reduce(function (
+  accumulator,
+  currentValue
+) {
+  return accumulator + currentValue.x;
+},
+initialValue);
+
+console.log(sum); // logs 6
+```
+
 ### Array.prototype.forEach()
 
 각 배열 요소에 대해 제공된 함수를 한 번씩 실행합니다.
@@ -523,7 +691,7 @@ Array.from({ length: 5 }, (v, i) => i);
 
   - fromIndex Optional
 
-    검색을 시작할 0 기반 인덱스로, 정수로 변환됩니다.
+    **검색을 시작할 0 기반 인덱스로, 정수로 변환됩니다.**
 
     1. 음수 인덱스는 배열의 끝부터 거꾸로 셉니다. 즉, fromIndex < 0이면, fromIndex + array.length가 사용됩니다. 그러나, 이 경우에도 배열은 여전히 앞에서 뒤로 검색됩니다.
     2. fromIndex < -array.length이거나 fromIndex가 생략되면, 0이 사용되어 전체 배열이 검색됩니다.

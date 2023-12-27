@@ -68,6 +68,9 @@
 <details open>
 <summary>Javascript</summary>
 
+- [Prototype](./Front-End/Javascript/Prototype/Prototype.md)
+- [단축평가](./Front-End/Javascript/단축평가/optional-chaining%20vs%20nullish-coalescing.md)
+- [!JS의 메모리 누수](./Front-End/Javascript/JS의%20메모리%20누수/JS의%20메모리%20누수.md)
 - [Primitive Type, Object Type](./Front-End/Javascript/Data%20type/Primitive%20Type,%20Object%20Type.md)
 - [!Symbol](./Front-End/Javascript/Data%20type/Symbol.md)
 - [Iterable, Iterator](./Front-End/Javascript/Data%20type/Iterable,%20Iterator.md)
@@ -107,6 +110,7 @@
 - [클래스 컴포넌트 vs 함수 컴포넌트](./Front-End/React/클래스%20컴포넌트%20vs%20함수%20컴포넌트/클래스%20컴포넌트%20vs%20함수%20컴포넌트.md)
 - [폴더구조 패턴](./Front-End/React/폴더구조%20패턴/폴더구조%20패턴.md)
 - [GraphQl](./Front-End/React/State%20Management/GraphQl/GraphQl에%20대하여.md)
+- [package.json과 package-lock.json](./Front-End/React/package.json,%20package-lock.json/package.json,%20package-lock.json.md)
 
 </details>
 
