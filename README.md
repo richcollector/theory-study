@@ -4,7 +4,7 @@
 
 보여주기식 지식이 아닌, 내용을 전부 이해합니다.
 
-조금 더 이해가 필요한 부분은 목록이름 or 파일이름에 !를 붙여 이해가 될 때까지 반복해서 보려고합니다.
+조금 더 이해가 필요한 부분은 !를 붙여 이해가 될 때까지 반복해서 보려고합니다.
 
 ---
 
@@ -37,7 +37,7 @@
 - [Cookie, Session의 차이점](./Front-End/Basic/Cookie,%20Session/Cookie,%20Session.md)
 - [Cache](./Front-End/Basic/Cache/Cache.md)
   - [Cache Storage](./Front-End/Basic/Cache/Cache%20Storage.md)
-  - [Localstorage, Sessionstorage의 차이점](./Front-End/Basic/WebStorage/저장소의%20차이점.md)
+  - [LocalStorage, SessionStorage 차이점](./Front-End/Basic/WebStorage/저장소의%20차이점.md)
 - [렌더링 원리](./Front-End/Basic/브라우저의%20렌더링/렌더링%20원리.md)
 - [Reflow, Repaint가 실행되는 시점](./Front-End/Basic/브라우저의%20렌더링/Reflow,%20Repaint가%20실행되는%20시점.md)
 - [이스케이프 시퀀스](./Front-End/Basic/이스케이프%20시퀀스/Escape%20Squence.md)
@@ -260,7 +260,7 @@
 - [정렬](./Algorithm/Basic/16.%20%20정렬/Sort.md)
 - [BFS, DFS](./Algorithm/Basic/17.%20BFS,%20DFS/BFS,%20DFS.md)
 - [그리디](./Algorithm/Basic/18.%20그리디/그리디.md)
-- [Deque](./Algorithm/Basic/19.%20Deque/Deque.md)
+- [Dequeue](./Algorithm/Basic/19.%20Deque/Dequeue.md)
 - [소수구하기](./Algorithm/Deep_Pratice/01.%20소수구하기/소수.md)
 - [재귀함수](./Algorithm/Deep_Pratice/02.%20재귀%20함수/재귀%20함수.md)
   - [재귀 함수를 이용한 순열, 조합](./Algorithm/Deep_Pratice/02.%20재귀%20함수/재귀%20함수를%20이용한%20순열,%20조합.md)
