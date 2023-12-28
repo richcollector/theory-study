@@ -24,7 +24,7 @@ const element = <h1>Hello, {name}</h1>;
 
 JSX의 중괄호 안에는 유효한 모든 JavaScript 표현식을 넣을 수 있습니다. 예를 들어 2 + 2, user.firstName 또는 formatName(user) 등은 모두 유효한 JavaScript 표현식입니다.
 
-아래 예시에서는 JavaScript 함수 호출의 결과인 formatName(user)을 <h1> 엘리먼트에 포함했습니다.
+아래 예시에서는 JavaScript 함수 호출의 결과인 formatName(user)을 `<h1>` 엘리먼트에 포함했습니다.
 
 ```jsx
 function formatName(user) {
@@ -122,7 +122,7 @@ const element = {
 };
 ```
 
-이러한 객체를 “React 엘리먼트”라고 하며, 화면에서 보고 싶은 것을 나타내는 표현이라 생각하면 됩니다. React는 이 객체를 읽어서, DOM을 구성하고 최신 상태로 유지하는 데 사용합니다.
+이러한 객체를 “React 엘 리먼트”라고 하며, 화면에서 보고 싶은 것을 나타내는 표현이라 생각하면 됩니다. React는 이 객체를 읽어서, DOM을 구성하고 최신 상태로 유지하는 데 사용합니다.
 
 ### 참고자료
 

@@ -68,6 +68,8 @@
 <details open>
 <summary>Javascript</summary>
 
+- [Immutability](./Front-End/Javascript/Immutability/Immutability.md)
+- [스크립트의 로드](./Front-End/Javascript/스크립트의%20로드/스크립트의%20로드.md)
 - [Prototype](./Front-End/Javascript/Prototype/Prototype.md)
 - [단축평가](./Front-End/Javascript/단축평가/optional-chaining%20vs%20nullish-coalescing.md)
 - [!JS의 메모리 누수](./Front-End/Javascript/JS의%20메모리%20누수/JS의%20메모리%20누수.md)
@@ -93,6 +95,7 @@
 <summary>Typescript</summary>
 
 - [Typescript에 대하여](./Front-End/Typescript/Tyoescript에%20대하여.md)
+- [Typescript의 컴파일 과정](./Front-End/Typescript/Typescript의%20컴파일%20과정.md)
 - [Type](./Front-End/Typescript/Type/Type.md)
 - [Utility Types](./Front-End/Typescript/Utility%20Types/Utility%20Types.md)
 
@@ -106,11 +109,15 @@
 - [!ErrorBoundary](./Front-End/React/Suspense,%20ErrorBoundary/ErrorBoundary.md)
 - [!Suspense + ErrorBoundary](./Front-End/React/Suspense,%20ErrorBoundary/Suspense%20+%20ErrorBoundary.md)
 - [export default, export](./Front-End/React/HOF,%20HOC/export%20default,%20export.md)
+- [Virtual DOM](./Front-End/React/Virtual%20DOM/Virtual%20DOM.md)
+  - [Reconciliation](./Front-End/React/Virtual%20DOM/Reconciliation/Reconciliation.md)
 - [HOF, HOC](./Front-End/React/HOF,%20HOC/HOF,%20HOC.md)
 - [클래스 컴포넌트 vs 함수 컴포넌트](./Front-End/React/클래스%20컴포넌트%20vs%20함수%20컴포넌트/클래스%20컴포넌트%20vs%20함수%20컴포넌트.md)
+- [제어 컴포넌트와 비제어 컴포넌트](./Front-End/React/제어%20컴포넌트와%20비제어%20컴포넌트/제어%20컴포넌트와%20비제어%20컴포넌트.md)
 - [폴더구조 패턴](./Front-End/React/폴더구조%20패턴/폴더구조%20패턴.md)
 - [GraphQl](./Front-End/React/State%20Management/GraphQl/GraphQl에%20대하여.md)
 - [package.json과 package-lock.json](./Front-End/React/package.json,%20package-lock.json/package.json,%20package-lock.json.md)
+- [레이아웃](./Front-End/React/레이아웃/레이아웃.md)
 
 </details>
 
@@ -165,11 +172,14 @@
 <summary>Git</summary>
 
 - [GitHub 사용법](./DevOps/GIT/GitHub/GitHub%20사용법.md)
+
   - [Commit Convention](./DevOps/GIT/GitHub/Commit%20Convention/Convention.md)
   - [README.md](./DevOps/GIT/GitHub/README.md/작성법.md)
   - [상태정리](./DevOps/GIT/GitHub/상태정리/3가지%20영역과%203가지%20상태.md)
   - [!Rebase와 Squash](./DevOps/GIT/GitHub/Rebase와%20Squash/Rebase와%20Squash.md)
   - [CI, CD](./DevOps/GIT/GitHub/CI,%20CD/CI,%20CD와%20GitHub%20Action.md)
+
+- [Mono Repo와 Multi Repo](./DevOps/GIT/GitHub/Mono%20Repo,%20Multi%20Repo/Mono%20Repo,%20Multi%20Repo.md)
 
 </details>
 
