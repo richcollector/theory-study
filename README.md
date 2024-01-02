@@ -300,5 +300,10 @@
 - [Digital Twin](./ETC/Digital%20Twin/Digital%20Twin.md)
 - [GIS](./ETC/GIS/GIS.md)
 - [Metaverse](./ETC/Metaverse/Metaverse.md)
+- [!WEB3.0](./ETC/WEB3/WEB3.md)
+  - [!Blockchain](./ETC/WEB3/BlockChain/BlockChain.md)
+    - [!STO](./ETC/WEB3/BlockChain/STO/STO.md)
+    - [!DApp](./ETC/WEB3/DApp/DApp.md)
+  - [!NFT](./ETC/WEB3/NFT/NFT.md)
 
 </details>
