@@ -1,7 +1,7 @@
 ## Recoil
 
-Recoil은 내부적으로 상태의 의존성을 추적하여 변경된 부분만을 리렌더링하는 데에 최적화되어 있습니다.
-Context API를 사용할 때는 Provider의 값을 업데이트할 때마다 해당 컨텍스트에 연결된 모든 하위 컴포넌트가 리렌더링됩니다
+Recoil은 내부적으로 상태의 의존성을 추적하여 **변경된 부분만을 리렌더링하는 데에 최적화**되어 있습니다.
+Context API를 사용할 때는 Provider의 값을 업데이트할 때마다 해당 컨텍스트에 연결된 모든 하위 컴포넌트가 리렌더링됩니다.
 
 - 사용법
 
@@ -44,7 +44,7 @@ export const restoreAccessTokenLoadable = selector({
 });
 ```
 
-- getAccessToken을 사용할 때 사용해주었다.
+- getAccessToken을 사용할 때 사용해주었습니다.
 
 ```jsx
   export const getAccessToken = async (): Promise<string | undefined> => {
@@ -68,9 +68,9 @@ export const restoreAccessTokenLoadable = selector({
 
 > In development, when a file is changed, Next.js re-builds the relevant page entry file.Because it's the same Node.js process, the atom has already been declared.The same thing can happen with HMR when the file change triggers a rebuild of the whole file, or even when the atom is declared inside a component lifecycle/hook and only that is being hot-replaced.
 
-Next.js 개발 중 파일이 변경되면 다시 빌드되는 과정에서 atom으로 만든 state가 재선언된다.
+Next.js 개발 중 파일이 변경되면 다시 빌드되는 과정에서 atom으로 만든 state가 재선언됩니다.
 
-key는 항상 고유값을 가져야하는데 재선언되는 과정에서 이미 key로 선언된 값을 key로 사용해서 문제가 발생하지만, 기능적으로는 문제가 없다고한다.
+key는 항상 고유값을 가져야하는데 재선언되는 과정에서 이미 key로 선언된 값을 key로 사용해서 문제가 발생하지만, 기능적으로는 문제가 없다고합니다.
 
 ### 해결방법
 
@@ -80,4 +80,4 @@ key는 항상 고유값을 가져야하는데 재선언되는 과정에서 이�
 
 - RecoilEnv.RECOIL_DUPLICATE_ATOM_KEY_CHECKING_ENABLED = false;
 
-  - Recoil변수들을 생성한 곳에 값을 세팅 해준다.
+  - Recoil변수들을 생성한 곳에 값을 세팅 해줍니다.

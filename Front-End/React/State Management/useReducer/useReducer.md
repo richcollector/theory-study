@@ -1,12 +1,12 @@
 ## useReducer
 
-useState의 대체 함수입니다. (state, action) => newState의 형태로 reducer를 받고 dispatch 메서드와 짝의 형태로 현재 state를 반환한다. 다수의 하윗값을 포함하는 복잡한 정적 로직을 만드는 경우나 다음 state가 이전 state에 의존적인 경우에 보통 useState보다 useReducer를 선호한다.
+useState의 대체 함수입니다. (state, action) => newState의 형태로 reducer를 받고 dispatch 메서드와 짝의 형태로 현재 state를 반환합니다. 다수의 하윗값을 포함하는 복잡한 정적 로직을 만드는 경우나 다음 state가 이전 state에 의존적인 경우에 보통 useState보다 useReducer를 선호합니다.
 
 ### useReducer 사용법
 
 - reducer 로직의 세팅
 
-  => 받아온 action에 따라서 state 변경 후 리턴 해주는 로직이다.
+  받아온 action에 따라서 state 변경 후 리턴 해주는 로직입니다.
 
 ```jsx
 import React, { useReducer } from "react";
@@ -36,7 +36,7 @@ function reducer(state, action) {
 
 - `return` 받은 로직의 사용
 
-  => 초기값을 설정해서 넣어주고, 위에서 설정한 로직을 useReducer안으로 넣어준다.
+  초기값을 설정해서 넣어주고, 위에서 설정한 로직을 useReducer안으로 넣어줍니다.
 
 ```jsx
 const initialState = { count: 0 };
@@ -68,7 +68,7 @@ function Counter({ step = 1, min = 0, max = 10 }) {
 
 - 초기화 지연
 
-  => init 함수는 선택적으로 제공할 수 있으며, 제공하지 않으면 initialCount 값이 초기 상태로 사용된다. 하지만 init 함수를 제공하면 더 복잡한 초기 상태를 만들거나 계산할 수 있다.
+  init 함수는 선택적으로 제공할 수 있으며, 제공하지 않으면 initialCount 값이 초기 상태로 사용된다. 하지만 init 함수를 제공하면 더 복잡한 초기 상태를 만들거나 계산할 수 있습니다.
 
 ```jsx
 function init(initialCount) {
