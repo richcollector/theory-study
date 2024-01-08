@@ -59,10 +59,25 @@ const p2 = { ...person };
 p2 === pserson; // false
 ```
 
+### mutable, immutable
+
 즉, 자바스크립트 객체에 접근하는 방법은 메모리 주소를 통하는 것으로, 일종의 포인터 역할을 합니다.
 객체를 가리키는 포인터가 하나도 없으면 객체를 사용할 방법이 없으므로 가비지 컬렉션의 대상이 됩니다.
 중요한 점은 "메모리가 더 이상 필요하지 않을 때 해제해야 합니다."
 
+- mutable
+
+  변할 수 있다는 뜻
+  참조타입
+  해당 데이터 주소를 찾아서 값을 변경
+
+- immutable
+
+  불변, 변할 수 없다는 뜻
+  원시타입
+  해당 데이터 주소와 별개의 새로운 주소에 값이 할당
+
 ### 참고자료
 
 - [자바스크립트 원시(primitive)타입 vs 참조(reference)타입](https://hwani.dev/js-primitive-reference-types/)
+- [[Javascript] MUTABLE과 IMMUTABLE](https://velog.io/@mnmm/js-immutable)

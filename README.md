@@ -70,6 +70,7 @@
 <details open>
 <summary>Javascript</summary>
 
+- [Type Casting](./Front-End/Javascript/Type%20Casting/Type%20Casting.md)
 - [!정규표현식](./Front-End/Javascript/정규표현식/정규표현식.md)
   - [유용한 정규표현식 모음](./Front-End/Javascript/정규표현식/유용한%20정규표현식%20모음.md)
   - [!정규식 기호](./Front-End/Javascript/정규표현식/정규식%20기호.md)
