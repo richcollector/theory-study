@@ -64,8 +64,10 @@
 - [Time](./Front-End/Basic/Time/컴퓨터가%20시간을%20표현하는%20방법.md)
 - [웹에디터](./Front-End/Basic/웹에디터/웹에디터.md)
 - [의존성](./Front-End/Basic/의존성/의존성에%20대하여.md)
-
-</details>
+- [Infinite Scroll](./Front-End/Basic/Infinite%20Scroller/Infinite%20Scroller.md)
+  - [!Scroll Event](./Front-End/Basic/Infinite%20Scroll/Scroll%20Event/Scroll%20Event.md)
+  - [!IntersectionObserver](./Front-End/Basic/Infinite%20Scroll/IntersectionObserver/IntersectionObserver.md)
+  </details>
 
 <details open>
 <summary>Javascript</summary>
@@ -128,6 +130,7 @@
 - [제어 컴포넌트와 비제어 컴포넌트](./Front-End/React/제어%20컴포넌트와%20비제어%20컴포넌트/제어%20컴포넌트와%20비제어%20컴포넌트.md)
 - [폴더구조 패턴](./Front-End/React/폴더구조%20패턴/폴더구조%20패턴.md)
 - [GraphQl](./Front-End/React/State%20Management/GraphQl/GraphQl에%20대하여.md)
+- [!npm, yarn, pnpm](./Front-End/React/Package%20Manager/npm,%20yarn,%20pnpm/npm,%20yarn,%20pnpm.md)
 - [package.json과 package-lock.json](./Front-End/React/package.json,%20package-lock.json/package.json,%20package-lock.json.md)
 - [레이아웃](./Front-End/React/레이아웃/레이아웃.md)
 - [State](./Front-End/React/State%20Management/State.md)
@@ -169,6 +172,7 @@
 <summary>CSS</summary>
 
 - [CSS](./Front-End/CSS/Basic/CSS/CSS.md)
+- [CSS animation, JS animation](./Front-End/CSS/CSS%20animation,%20JS%20animation/CSS%20animation,%20JS%20animation.md)
 - [CSS-in-JS vs CSS-in-CSS](./Front-End/CSS/Basic/CSS-in-JS%20vs%20CSS-in-CSS/CSS-in-JS%20vs%20CSS-in-CSS.md)
 - [cascading](./Front-End/CSS/Basic/cascading/cascading.md)
 - [box-model, box-sizing](./Front-End/CSS/Basic/box-model/Box%20model.md)
