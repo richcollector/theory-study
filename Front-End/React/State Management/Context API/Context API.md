@@ -40,5 +40,5 @@ function Child() {
 
 ### 주의사항
 
-context API는 전역 상태 관리가 아니라, 여러 컴포넌트들에게 동일한 값을 접근할수도록 만들어주는 API입니다.
+context API는 전역 상태 관리가 아니라, 여러 컴포넌트들에게 동일한 값을 접근할 수 있도록 만들어주는 API입니다.
 Context + useState/useReducer 등으로 전역 상태관리와 유사한 형태로 사용할 수도 있습니다.
