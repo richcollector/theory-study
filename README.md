@@ -56,6 +56,8 @@
   - [Layout Shift](./Front-End/Basic/성능%20최적화/Layout%20Shift/Layout%20Shift.md)
   - [Optimistic UI](./Front-End/Basic/성능%20최적화/Optimistic%20UI/Optimistic%20UI.md)
   - [Debouncing, Throttling을 통한 최적화](./Front-End/Basic/Debouncing,%20Throttling/)
+- [웹 개발 생산성 향상](./Front-End/Basic/웹%20개발%20생산성%20향상/웹%20개발%20생산성%20%20향상.md)
+  - [Debugging](./Front-End/Basic/웹%20개발%20생산성%20향상/Debugging/Debugging.md)
 - [CORS](./Front-End/Basic/CORS/CORS.md)
 - [!Cross Browsing](./Front-End/Basic/Cross%20Browsing/Cross%20Browsing.md)
 - [!MIME-Type](./Front-End/Basic/MIME-Type/MIME-Type.md)
