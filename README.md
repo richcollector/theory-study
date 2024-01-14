@@ -71,6 +71,7 @@
   - [!Scroll Event](./Front-End/Basic/Infinite%20Scroll/Scroll%20Event/Scroll%20Event.md)
   - [!IntersectionObserver](./Front-End/Basic/Infinite%20Scroll/IntersectionObserver/IntersectionObserver.md)
 - [!결제 프로세스의 이해](./Front-End/Payment/Payment.md)
+- [비트연산](./Front-End/Basic/비트연산/비트연산.md)
 
   </details>
 
@@ -277,6 +278,8 @@
     - [Semaphore, Mutex](./Operating-System/프로세스,%20스레드/Semaphore,%20Mutex/Semaphore,%20Mutex.md)
   - [멀티 프로세스, 멀티 스레드](./Operating-System/프로세스,%20스레드/멀티%20프로세스,%20멀티%20스레드.md)
   - [Context Switch](./Operating-System/프로세스,%20스레드/Context%20Switch/Context%20Switch.md)
+- [!CPU Scheduling](./Operating-System/CPU%20Scheduling/CPU%20Scheduling.md)
+- [Deadlock](<./Operating-System/프로세스,%20스레드/Deadlock/데드락(Deadlock).md>)
 - [Linux 환경에서 개발](./Operating-System/Linux%20환경에서%20개발/Linux%20환경에서%20개발.md)
   - [윈도우에 리눅스 개발 환경 구축하기](./Operating-System/Linux%20환경에서%20개발/윈도우에%20리눅스%20개발%20환경%20구축하기.md)
 
@@ -344,5 +347,6 @@
     - [!STO](./ETC/WEB3/BlockChain/STO/STO.md)
     - [!DApp](./ETC/WEB3/DApp/DApp.md)
   - [!NFT](./ETC/WEB3/NFT/NFT.md)
+- [ITS](./ETC/ITS/ITS.md)
 
 </details>
