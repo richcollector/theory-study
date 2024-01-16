@@ -116,7 +116,7 @@
 <details open>
 <summary>Typescript</summary>
 
-- [Typescript에 대하여](./Front-End/Typescript/Tyoescript에%20대하여.md)
+- [Typescript에 대하여](./Front-End/Typescript/Typescript에%20대하여.md)
   - [Typescript의 컴파일 과정](./Front-End/Typescript/Typescript의%20컴파일%20과정.md)
   - [Type](./Front-End/Typescript/Type/Type.md)
   - [Utility Types](./Front-End/Typescript/Utility%20Types/Utility%20Types.md)
@@ -197,6 +197,7 @@
 - [Pseudo Selectors](<./Front-End/CSS/Basic/Pseudo%20Selectors/가상%20선택자(Pseudo%20Selectors).md>)
   - [of-type-and-child](./Front-End/CSS/Basic/Pseudo%20Selectors/of-type-and-child.md)
 - [media-query, break-point](./Front-End/CSS/Basic/media-query,%20break-point/media-query,%20break-point.md)
+- [!SCSS](./Front-End/CSS/SCSS/SCSS에%20대하여.md)
 
 </details>
 
@@ -261,7 +262,7 @@
 - [OSI 7계층과 TEC/IP 계층의 차이점](./Network/TCP,%20UDP/OSI%207계층과%20TCP,%20IP%20계층.md)
 - [TCP와 UDP의 차이점](./Network/TCP,%20UDP/TCP,%20UDP.md)
 - [URL을 입력할 때 일어나는 과정](./Network/URL/URL을%20입력할%20때.md)
-- [URL은 URI와 URN을 포함](./Network/URL/URL과%20URN%20=%20URI.md)
+- [URI = URL + URN](./Network/URL/URI%20=%20URN%20+%20URL.md)
 - [Web Server와 Was의 차이점](./Network/Web%20Server,%20Was/Web%20Server와%20Was.md)
 - [WebSocket](./Network/WebSocket/WebSocket.md)
 
