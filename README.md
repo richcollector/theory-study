@@ -183,16 +183,21 @@
 <details open>
 <summary>CSS</summary>
 
-- [CSS](./Front-End/CSS/Basic/CSS/CSS.md)
+- [CSS](./Front-End/CSS/CSS.md)
 - [CSS animation, JS animation](./Front-End/CSS/CSS%20animation,%20JS%20animation/CSS%20animation,%20JS%20animation.md)
 - [CSS-in-JS vs CSS-in-CSS](./Front-End/CSS/Basic/CSS-in-JS%20vs%20CSS-in-CSS/CSS-in-JS%20vs%20CSS-in-CSS.md)
 - [cascading](./Front-End/CSS/Basic/cascading/cascading.md)
 - [box-model, box-sizing](./Front-End/CSS/Basic/box-model/Box%20model.md)
+- [z-index](./Front-End/CSS/Basic/z-index/z-index.md)
+- [calc()](./Front-End/CSS/Basic/calc/calc.md)
+- [web font](./Front-End/CSS/Basic/web%20font/web%20font.md)
+- [transition-transform](./Front-End/CSS/Basic/transition-transform/transition,%20transform.md)
+- [animation](./Front-End/CSS/Basic/animation/animation.md)
 - [display](./Front-End/CSS/Basic/display/display.md)
   - [absolute, relative, fixed](./Front-End/CSS/Basic/display/relative,%20absolute,%20fixed/relative,%20absolute,%20fixed.md)
-    <!-- - [float]() -->
-    <!-- - [flex]() -->
-    <!-- - [grid]() -->
+    [float](./Front-End/CSS/Basic/display/float/float.md)
+    [flex](./Front-End/CSS/Basic/display/flex/flex.md)
+    [grid](./Front-End/CSS/Basic/display/grid/grid.md)
 - [!Important](./Front-End/CSS/Basic/!Important/!Impotant.md)
 - [Pseudo Selectors](<./Front-End/CSS/Basic/Pseudo%20Selectors/가상%20선택자(Pseudo%20Selectors).md>)
   - [of-type-and-child](./Front-End/CSS/Basic/Pseudo%20Selectors/of-type-and-child.md)
