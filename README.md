@@ -13,8 +13,12 @@
 <details open>
 <summary>Basic</summary>
 
+- [Architecture Patterns, Business Logic, Software Architecture](./Design-Pattern/Architecture%20Patterns,%20Business%20Logic,%20Software%20Architecture.md)
 - [!Flux Pattern](./Design-Pattern/Flux%20Pattern/Flux.md)
 - [Singleton pattern](./Design-Pattern/Singleton%20pattern/Singleton%20pattern.md)
+- [MVC Pattern](./Design-Pattern/MVC%20Pattren/MVC%20Pattern.md)
+- [!MVP Pattern](./Design-Pattern/MVP%20Pattern/MVP%20Pattern.md)
+- [!MVVM Pattern](./Design-Pattern/MVVM%20Pattern/MVVM%20Pattern.md)
 
 </details>
 
