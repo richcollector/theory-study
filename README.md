@@ -8,17 +8,19 @@
 
 ---
 
-### Design Pattern
+### Design-Pattern ＆ Architecture
 
 <details open>
 <summary>Basic</summary>
 
-- [Architecture Patterns, Business Logic, Software Architecture](./Design-Pattern/Architecture%20Patterns,%20Business%20Logic,%20Software%20Architecture.md)
-- [!Flux Pattern](./Design-Pattern/Flux%20Pattern/Flux.md)
-- [Singleton pattern](./Design-Pattern/Singleton%20pattern/Singleton%20pattern.md)
-- [MVC Pattern](./Design-Pattern/MVC%20Pattren/MVC%20Pattern.md)
-- [!MVP Pattern](./Design-Pattern/MVP%20Pattern/MVP%20Pattern.md)
-- [!MVVM Pattern](./Design-Pattern/MVVM%20Pattern/MVVM%20Pattern.md)
+- [Architecture Patterns, Business Logic, Software Architecture](./Design-Pattern%20＆%20Architecture/Architecture%20Patterns,%20Business%20Logic,%20Software%20Architecture.md)
+- [Serverless Architecture](./Design-Pattern%20＆%20Architecture/Serverless%20Architecture/Serverless%20Architecture.md)
+
+- [!Flux Pattern](./Design-Pattern%20＆%20Architecture/Flux%20Pattern/Flux.md)
+- [Singleton pattern](./Design-Pattern%20＆%20Architecture/Singleton%20pattern/Singleton%20pattern.md)
+- [MVC Pattern](./Design-Pattern%20＆%20Architecture/MVC%20Pattren/MVC%20Pattern.md)
+- [!MVP Pattern](./Design-Pattern%20＆%20Architecture/MVP%20Pattern/MVP%20Pattern.md)
+- [!MVVM Pattern](./Design-Pattern%20＆%20Architecture/MVVM%20Pattern/MVVM%20Pattern.md)
 
 </details>
 
@@ -167,8 +169,9 @@
 <details open>
 <summary>Next.js</summary>
 
-- [document.js vs \_app.js](./Front-End/Next.js/document.js%20vs%20_app.js/document.js%20vs%20_app.js.md)
 - [Next.js에 대하여](./Front-End/Next.js/Next.js.md)
+- [document.js vs \_app.js](./Front-End/Next.js/document.js%20vs%20_app.js/document.js%20vs%20_app.js.md)
+- [Next.js의 CSR, SSG, SSR, ISG](./Front-End/Next.js/Next.js의%20CSR,%20SSG,%20SSR,%20ISG/Next.js의%20CSR,%20SSG,%20SSR,%20ISG.md)
 
 </details>
 
@@ -209,6 +212,7 @@
   - [of-type-and-child](./Front-End/CSS/Basic/Pseudo%20Selectors/of-type-and-child.md)
 - [media-query, break-point](./Front-End/CSS/Basic/media-query,%20break-point/media-query,%20break-point.md)
 - [!SCSS](./Front-End/CSS/SCSS/SCSS에%20대하여.md)
+- [Emotion, Styled Component](./Front-End/CSS/Emotion,%20Styled%20Component/Emotion,%20Styled%20Component.md)
 
 </details>
 
@@ -238,12 +242,15 @@
 <details open>
 <summary>AWS</summary>
 
-- [S3](./DevOps/AWS/S3/정적페이지%20배포.md)
-- [EC2](./DevOps/AWS/EC2/가상의%20컴퓨터%20만들기.md)
+- [S3, EC2, Amplify](./DevOps/AWS/S3,%20EC2,%20Amplify/S3,%20EC2,%20Amplify.md)
+  - [S3](./DevOps/AWS/S3/정적페이지%20배포.md)
+  - [EC2](./DevOps/AWS/EC2/가상의%20컴퓨터%20만들기.md)
+  - [!Amplify](./DevOps/AWS/Amplify/Amplify.md)
 - [Route 53](./DevOps/AWS/Route%2053/도메인%20연결.md)
 - [Certificate Manager](./DevOps/AWS/Certificate%20Manager/Certificate%20Manager.md)
 - [CloudFront](./DevOps/AWS/CloudFront/CDN.md)
 - [Load Balancer](./DevOps/AWS/Load%20Balancer/분산%20도메인.md)
+- [Cognito](./DevOps/AWS/Cognito/Cognito.md)
 
 </details>
 

@@ -189,6 +189,6 @@ span 태그는 제외하고 동일 타입인 p태그만 순서를 정하여,
 
 ![](./nth-of-type.png)
 
-### 참고 자료
+### 참고자료
 
 - [[CSS] :nth-child :nth-of-type 가상 클래스(의사 클래스)](https://ak-coding.tistory.com/23)

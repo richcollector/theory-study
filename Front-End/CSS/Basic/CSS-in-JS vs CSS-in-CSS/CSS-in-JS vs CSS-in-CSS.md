@@ -45,6 +45,6 @@ CSS 모듈은 동일 프로젝트 소스 안에 CSS 클래스 이름이 중복�
 
   CSS 파일이 추출되는 CSS 모듈 방식은 자바스크립트 해석 과정이 따로 없기 때문에 페이지가 훨씬 빨리 전환됩니다.
 
-### 참고 자료
+### 참고자료
 
 - [CSS-in-JS vs CSS-in-CSS : 성능 비교를 중심으로](https://velog.io/@sunfkkc/CSS-in-JS-vs-CSS-in-CSS-%EC%84%B1%EB%8A%A5-%EB%B9%84%EA%B5%90%EB%A5%BC-%EC%A4%91%EC%8B%AC%EC%9C%BC%EB%A1%9C)
