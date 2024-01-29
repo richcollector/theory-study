@@ -82,6 +82,6 @@ function Example({ condition }) {
 
 따라서, Hooks는 항상 최상위 레벨에서 호출해야 하며, 조건부 로직은 Hook 내부에서 처리해야 합니다. 이렇게 하면 리액트는 Hooks가 호출되는 순서를 기억하고, 이에 따라 상태를 올바르게 관리할 수 있습니다.
 
-### 참고 자료
+### 참고자료
 
 - [ React hook과 일반 함수의 차이점](https://velog.io/@dev_seongjoo/React-hook%EC%9D%98-%EC%9E%A5%EC%A0%90%EA%B3%BC-React-hook-%EA%B3%BC-%EC%9D%BC%EB%B0%98-%ED%95%A8%EC%88%98%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%97%90-%EB%8C%80%ED%95%B4-%EB%A7%90%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94)

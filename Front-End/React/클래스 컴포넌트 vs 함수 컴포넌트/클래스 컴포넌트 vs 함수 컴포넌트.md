@@ -148,6 +148,6 @@ class Counter extends Component {
 export default Counter;
 ```
 
-### 참고 자료
+### 참고자료
 
 - [[React] 클래스형 컴포넌트와 함수형 컴포넌트](https://velog.io/@seong-dodo/React-%ED%81%B4%EB%9E%98%EC%8A%A4%ED%98%95-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-vs-%ED%95%A8%EC%88%98%ED%98%95-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8)

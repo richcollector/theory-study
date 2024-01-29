@@ -163,6 +163,8 @@
 - [Lodash, Immer](./Front-End/React/Lodash,%20Immer/Lodash,%20Immer.md)
 - [React 18]()
   - [useDeferredValue, useTransition](./Front-End/React/React%2018/useDeferredValue,%20useTransition/useDeferredValue,%20useTransition.md)
+- [!React의 SSR](./Front-End/React/React의%20SSR/React의%20SSR.md)
+- [Static Routing, Dynamic Routing](./Front-End/Next.js/Routing/Routing.md)
 
 </details>
 
@@ -170,8 +172,14 @@
 <summary>Next.js</summary>
 
 - [Next.js에 대하여](./Front-End/Next.js/Next.js.md)
+- [Pre-rendering](./Front-End/Next.js/Pre-rendering/Pre-rendering.md)
+- [getStaticProps, getStaticPath, getServerSideProps](./Front-End/Next.js/getStaticProps,%20getStaticPath,%20getServerSideProps/getStaticProps,%20getStaticPath,%20getServerSideProps.md)
+- [hydration](./Front-End/Next.js/hydration/hydration.md)
+- [TTV, TTI](./Front-End/Next.js/TTV,%20TTI/TTV,%20TTI.md)
+- [Pre-rendering](./Front-End/Next.js/Pre-rendering/Pre-rendering.md)
 - [document.js vs \_app.js](./Front-End/Next.js/document.js%20vs%20_app.js/document.js%20vs%20_app.js.md)
 - [Next.js의 CSR, SSG, SSR, ISG](./Front-End/Next.js/Next.js의%20CSR,%20SSG,%20SSR,%20ISG/Next.js의%20CSR,%20SSG,%20SSR,%20ISG.md)
+- [React, Next Routing 차이점](./Front-End/Next.js/Routing/Routing%20차이점.md)
 
 </details>
 

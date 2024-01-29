@@ -41,7 +41,7 @@ XHTML(Extensible Hypertext Markup Language)는 HTML과 동등한 표현 능력�
 
 HTML -> XHTML -> HTML5 이 순서로 사용해왔는데 현재는 주로 HTML5 를 대부분 사용하기 때문에 좀 느슨하게 프로그래밍을 해도 동작을 합니다. HTML이 느슨하게 동작하는 것은 코드를 적게 사용하기 위함입니다. 코드를 적게 사용 = 태그가 적어짐 = 웹사이트 크기 작아짐 = 빠른 로딩이 가능합니다.
 
-### 참고 자료
+### 참고자료
 
 - [HTML 과 XHTML 의 차이](https://j-ungry.tistory.com/351)
 - [XML과 XHTML은 뭐가 다른가요?](https://velog.io/@kseon329/XML%EA%B3%BC-XHTML%EC%9D%80-%EB%AD%90%EA%B0%80-%EB%8B%A4%EB%A5%B8%EA%B0%80%EC%9A%94)

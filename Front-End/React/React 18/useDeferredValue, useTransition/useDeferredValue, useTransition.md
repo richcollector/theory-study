@@ -90,6 +90,6 @@ startTransition(() => {
 
 마치 useMemo는 값을 메모이제이션하고 useCallback은 함수를 메모이제이션 하는 것과 같이 값이냐 함수냐로 구분할 수 있습니다.
 
-### 참고 자료
+### 참고자료
 
 - [React 18 useDeferredValue와 useTransition 이란?](https://doiler.tistory.com/83)
