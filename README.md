@@ -332,6 +332,7 @@
 
 - [자료구조](./Algorithm/Basic/02.%20Data_Structure/Type.md)
 - [시간복잡도](./Algorithm/Basic/03.%20시간복잡도/BigO.md)
+  - [!자료구조별 시간복잡도](./Algorithm/Basic/03.%20시간복잡도/자료구조별%20시간복잡도.md)
 - [배열](./Algorithm/Basic/05.%20배열/Aray.md)
 - [연결 리스트](./Algorithm/Basic/07.%20연결%20리스트/Linked_List.md)
 - [스택](./Algorithm/Basic/08.%20스택/Stack.md)
