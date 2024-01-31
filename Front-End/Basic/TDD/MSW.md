@@ -73,10 +73,11 @@ Mock Service Worker를 사용하면 선언적 요청 핸들러 (declarative requ
 
 ```jsx
 // src/mocks.js
-import { setupWorker, rest } from "msw";
+import { setupWorker } from "msw/browser";
+import { http } from "msw";
 
 const worker = setupWorker(
-  rest.post("/login", (req, res, ctx) => {
+  http.post("/login", (req, res, ctx) => {
     const isAuthenticated = sessionStorage.getItem("username");
 
     if (!isAuthenticated) {
@@ -100,7 +101,7 @@ const worker = setupWorker(
 worker.start();
 ```
 
-- HTTP POST 요청을 처리하기 위해 rest.post 함수를 사용해 요청을 보냅니다.
+- HTTP POST 요청을 처리하기 위해 http.post 함수를 사용해 요청을 보냅니다.
 - 핸들러 함수의 첫번째 파라미터에는 '/login' 라는 요청 경로를 넣었고, 두번째 파라미터에는 response resolver라는 콜백 함수를 넣었습니다.
 - Response resolver에는 세 가지 인자를 받습니다: req, res, ctx
   - req: 매칭되는 요청에 대한 정보
@@ -148,7 +149,7 @@ src/mocks/browser.js 파일을 생성해서 worker 설정을 해야합니다.
 
 ```jsx
 // src/mocks/browser.js
-import { setupWorker } from "msw";
+import { setupWorker } from "msw/browser";
 import { handlers } from "./handlers";
 
 // This configures a Service Worker with the given request handlers.
@@ -188,25 +189,25 @@ ReactDOM.render(<App />, document.getElementById("root"));
 코드는 되도록이면 mocks 폴더에 두는 것이 좋습니다. src/mocks/handlers.js에 요청 핸들러를 작성해봅시다.
 
 ```jsx
-import { rest } from "msw";
+import { http } from "msw";
 
 const posts = ["게시글1", "게시글2", "게시글3"];
 
 export const handlers = [
   // 포스트 목록
-  rest.get("/posts", (req, res, ctx) => {
+  http.get("/posts", (req, res, ctx) => {
     return res(ctx.status(200), ctx.json(todos));
   }),
 
   // 포스트 추가
-  rest.post("/posts", (req, res, ctx) => {
+  http.post("/posts", (req, res, ctx) => {
     posts.push(req.body);
     return res(ctx.status(201));
   }),
 ];
 ```
 
-REST API를 모킹하기 위해 MSW의 rest객체를 사용하였다. 포스트 목록을 조회하기 위한 GET /posts는 배열에 담긴 포스트를 응답해주고, 새로운 포스트 등록을 위한 POST /posts는 요청 바디로 넘어온 포스트를 배열에 추가합니다.
+REST API를 모킹하기 위해 MSW의 http객체를 사용하였습니다. 포스트 목록을 조회하기 위한 GET /posts는 배열에 담긴 포스트를 응답해주고, 새로운 포스트 등록을 위한 POST /posts는 요청 바디로 넘어온 포스트를 배열에 추가합니다.
 
 #### Service Worker 요청 테스트
 
@@ -238,10 +239,11 @@ fetch("/posts")
 그러나 Mock Service Worker는 클라이언트 측에서 실행되므로, 보안 위반 없이 응답으로부터 Mocked 쿠키를 수신하는 것과 유사한 기능을 제공할 수 있습니다. document.cookie 문자열에 지정된 쿠키를 직접 설정하는 ctx.cookie() 응답 변환기 함수(response transformer function)를 사용하면 됩니다.
 
 ```jsx
-import { setupWorker, rest } from "msw";
+import { setupWorker } from "msw/browser";
+import { http } from "msw";
 
 const worker = setupWorker(
-  rest.post("/login", (req, res, ctx) => {
+  http.post("/login", (req, res, ctx) => {
     return res(
       // Calling `ctx.cookie()` sets given cookies
       // on `document.cookie` directly.
@@ -260,9 +262,10 @@ worker.start();
 예를 들어, MSW로 테스트를 할 때 요청 파라미터에 따라 다른 응답을 줘야하는 경우가 있는데, 이때 핸들러에서 req 객체를 통해 파라미터에 접근이 가능합니다.
 
 ```jsx
-import { setupWorker, rest } from "msw";
+import { setupWorker } from "msw/browser";
+import { http } from "msw";
 const worker = setupWorker(
-  rest.get("/products", (req, res, ctx) => {
+  http.get("/products", (req, res, ctx) => {
     const productId = req.url.searchParams.get("id");
     return res(
       ctx.json({
@@ -299,10 +302,11 @@ Response patching은 모의 응답(mocked response)이 실제 응답을 기반�
 아래는 Github API v3에서 응답을 패칭하는 예시입니다.
 
 ```jsx
-import { setupWorker, rest } from "msw";
+import { setupWorker } from "msw/browser";
+import { http } from "msw";
 
 const worker = setupWorker(
-  rest.get("https://api.github.com/users/:username", async (req, res, ctx) => {
+  http.get("https://api.github.com/users/:username", async (req, res, ctx) => {
     // Perform an original request to the intercepted request URL
     const originalResponse = await ctx.fetch(req);
     const originalResponseData = await originalResponse.json();
@@ -342,10 +346,11 @@ msw로 요청에 대한 에러 응답을 mocking 할 수도 있습니다. 오류
 아래는 로그인 POST요청에서 에러 응답을 mocking 하는 예제입니다.
 
 ```jsx
-import { setupWorker, rest } from "msw";
+import { setupWorker } from "msw/browser";
+import { http } from "msw";
 
 const worker = setupWorker(
-  rest.post("/login", async (req, res, ctx) => {
+  http.post("/login", async (req, res, ctx) => {
     const { username } = await req.json();
 
     return res(
@@ -389,3 +394,7 @@ worker.start();
 ### 참고자료
 
 - [MSW(Mock Service Worker)로 더욱 생산적인 FE 개발하기](https://velog.io/@khy226/msw%EB%A1%9C-%EB%AA%A8%EC%9D%98-%EC%84%9C%EB%B2%84-%EB%A7%8C%EB%93%A4%EA%B8%B0)
+- [msw 2.0 업데이트 핵심 변경점](https://assets.velcdn.com/@gaoridang/msw-2.0-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%ED%95%B5%EC%8B%AC-%EB%B3%80%EA%B2%BD%EC%A0%90)
+- [[Next.js] MSW로 API 모킹하기](https://jinist.tistory.com/368)
+- [Vitest 테스트 프레임워크에 MSW 적용](https://velog.io/@davidktlee/Vitest-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%EC%97%90-MSW-%EC%A0%81%EC%9A%A9)
+- [MSW 공식](https://mswjs.io/docs/migrations/1.x-to-2.x#cannot-find-module-mswnode-jsdom)

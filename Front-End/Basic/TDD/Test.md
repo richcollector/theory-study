@@ -267,3 +267,9 @@ describe("sum", () => {
 });
 ```
 
+### 참고자료
+
+- [Jest Error: import statement outside a module](https://iosroid.tistory.com/117)
+- [nodejs ReferenceError: fetch is not defined 오류가 발생 할때](https://www.pabburi.co.kr/content/javascript/nodejs-referenceerror-fetch-is-not-defined-%EC%98%A4%EB%A5%98%EA%B0%80-%EB%B0%9C%EC%83%9D/)
+- [1th School Project : Software Engineering\_\_20210531 Jest: SyntaxError: Unexpected token export](https://velog.io/@dhsys112/1th-School-Project-Software-Engineering20210531-Jest-SyntaxError-Unexpected-token-export)
+- [15.8 Jest에서 import/export를 사용하기](https://poiemaweb.com/jest-esm)

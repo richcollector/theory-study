@@ -43,11 +43,11 @@ Next.js는 SPA인 React에서 SSR(Server Side Rendering)을 쉽게 구현할 수
 
 Next.js는 file-system을 기반으로 페이지를 관리합니다. React에서는 별도의 react-router-dom 패키지를 설치했다면 Next.js는 해당 과정이 필요 없습니다. 프로젝트의 pages 폴더의 이름과 깊이로 라우팅 처리를 해줍니다. 또한 pages 폴더의 컴포넌트 파일을 실행하여 첫 렌더링 결과물을 빈 HTML이 아닌 콘텐츠로 채워진 문서로 pre-rendering합니다.
 
-![](./next１.png)
+![](./img/next１.png)
 
 pages안의 폴더와 파일 기준으로 라우팅이 됩니다. portfolio 폴더 안의 index.js가 `/portfolio`의 대표 페이지가 됩니다.
 
-![](./next2.png)
+![](./img/next2.png)
 
 동적 라우팅의 경우에는 [ ]를 사용해서 해당 값을 넘겨주면 됩니다.
 

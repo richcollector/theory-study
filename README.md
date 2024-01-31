@@ -165,6 +165,7 @@
   - [useDeferredValue, useTransition](./Front-End/React/React%2018/useDeferredValue,%20useTransition/useDeferredValue,%20useTransition.md)
 - [!React의 SSR](./Front-End/React/React의%20SSR/React의%20SSR.md)
 - [Static Routing, Dynamic Routing](./Front-End/Next.js/Routing/Routing.md)
+- [!RSC vs RCC](./Front-End/React/RSC%20vs%20RCC/RSC%20vs%20RCC.md)
 
 </details>
 
@@ -180,6 +181,9 @@
 - [document.js vs \_app.js](./Front-End/Next.js/document.js%20vs%20_app.js/document.js%20vs%20_app.js.md)
 - [Next.js의 CSR, SSG, SSR, ISG](./Front-End/Next.js/Next.js의%20CSR,%20SSG,%20SSR,%20ISG/Next.js의%20CSR,%20SSG,%20SSR,%20ISG.md)
 - [React, Next Routing 차이점](./Front-End/Next.js/Routing/Routing%20차이점.md)
+  - [!App Routing](./Front-End/Next.js/Routing/App%20Routing.md)
+  - [!App Routing vs Page Routing](./Front-End/Next.js/Routing/App%20Routing%20vs%20Page%20Routing/App%20Routing%20vs%20Page%20Routing.md)
+- [!RSC vs SSR](./Front-End/Next.js/RSC%20vs%20SSR/RSC%20vs%20SSR.md)
 
 </details>
 
