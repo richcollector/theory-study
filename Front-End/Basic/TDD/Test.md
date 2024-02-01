@@ -26,6 +26,89 @@
 
 자바스크립트는 Jest, Mocha, chai 등의 테스트 라이브러리들이 대표적으로 사용되고 있습니다. Jest는 주간 약 1800만 다운로드의 압도적인 점유율을 가지고 있으며, CRA에서도 기본적으로 Jest를 포함해서 환경을 구성해주고 있습니다.
 
+#### React와 호환
+
+- babel.config.json
+
+  jest가 common.js를 따르고 있어 import / export를 사용하려면 필요한 설정입니다.
+
+```json
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
+```
+
+- jest.config.json
+
+```json
+{
+  "verbose": true,
+  "collectCoverage": true,
+  "testEnvironment": "jsdom",
+  "moduleNameMapper": {
+    "src/(.*)$": "<rootDir>/src/$1",
+    "mocks/(.*)$": "<rootDir>/src/mocks/$1",
+    "@mocks/(.*)$": "<rootDir>/src/mocks/$1",
+    "@root/(.*)$": "<rootDir>/../$1"
+  },
+  "setupFiles": ["<rootDir>/jest.polyfills.js"],
+  "setupFilesAfterEnv": ["<rootDir>/jest.setup.js"],
+  "testEnvironmentOptions": {
+    "customExportConditions": [""]
+  }
+}
+```
+
+- jest.polyfills.js
+
+  msw와 호환하면서 msw/node 경로를 찾지 못하는데, polyfills를 설정하여 node환경에서 가져올 수 있도록 해줍니다.
+
+```js
+// jest.polyfills.js
+/**
+ * @note The block below contains polyfills for Node.js globals
+ * required for Jest to function when running JSDOM tests.
+ * These HAVE to be require's and HAVE to be in this exact
+ * order, since "undici" depends on the "TextEncoder" global API.
+ *
+ * Consider migrating to a more modern test runner if
+ * you don't want to deal with this.
+ */
+
+const { TextDecoder, TextEncoder } = require("node:util");
+/* eslint-disable no-undef */
+Object.defineProperties(globalThis, {
+  TextDecoder: { value: TextDecoder },
+  TextEncoder: { value: TextEncoder },
+});
+
+const { Blob } = require("node:buffer");
+const { fetch, Headers, FormData, Request, Response } = require("undici");
+
+Object.defineProperties(globalThis, {
+  fetch: { value: fetch, writable: true },
+  Blob: { value: Blob },
+  Headers: { value: Headers },
+  FormData: { value: FormData },
+  Request: { value: Request },
+  Response: { value: Response },
+});
+```
+
+- jest.setup.js
+
+  어떤 서버를 이용할 것인지 설정을 해줍니다. (msw와 호환)
+
+```js
+import server from "@mocks/server";
+
+beforeAll(() => server.listen());
+
+afterEach(() => server.resetHandlers());
+
+afterAll(() => server.close());
+```
+
 #### Jest 사용법
 
 Jest는 기본적으로 _.test._ 의 형태를 가진 파일을 테스트 파일로 인식하며, 해당 파일안에 있는 코드를 실행합니다.
@@ -34,7 +117,7 @@ Jest에서는 이를 기대한 상황과 일치하는지 판단하는 함수들�
 
 특정한 동작을 수행합니다.
 matcher를 통해서 실제 결과와 기대값이 맞는지를 검증합니다.
-이때 하나의 특정한 동작을 수행하기 위해서 test() 또는 it() 함수를 활용할 수 있다.
+이때 하나의 특정한 동작을 수행하기 위해서 test() 또는 it() 함수를 활용할 수 있습니다.
 
 - 성공코드
 
@@ -113,12 +196,14 @@ test("null", () => {
 #### 추가사항
 
 - mockFunction
-  jest.fn()
+
+  `jest.fn()`
   일반 함수의 호출을 검증하는 기능이 없어, 사용합니다.
 
 - function matcher
-  toHaveBeenCalledWidth
-  함수와 같이 호출이 되는지 확인해준다.
+
+  `toHaveBeenCalledWidth`
+  함수와 같이 호출이 되는지 확인해줍니다.
 
 ### 컴포넌트의 UI와 동작 테스트
 
@@ -139,9 +224,7 @@ Jest를 통해서 순수한 자바스크립트 코드를 테스트할 수 있지
 테스트를 위해서는 이 요소들이 DOM상에 존재하는지, 그리고 특정 프로퍼티를 가지고 있는지 등을 검사할 수 있어야 합니다. 이는 DOM에 관련된 기능이기에 jest에서는 이러한 기능을 수행할 수 있는 matcher들을 기본적으로 포함하고 있지는 않습니다. 이러한 matchers를 추가하기 위해서는 jest-dom 라이브러리를 사용해야 합니다.(마찬가지로 CRA에 포함되어 있습니다.)
 
 ```jsx
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-import "@testing-library/jest-dom";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import App from "./App";
 
 test("App rendering", () => {
@@ -150,10 +233,17 @@ test("App rendering", () => {
   const header = screen.getByText("Hello World");
   const button = screen.getByText("Click me!");
 
-  userEvent.click(button);
+  fireEvent.click(button);
 
-  expect(header).toBeInTheDocument();
-  expect(button).toBeDisabled();
+  await waitFor(() => {
+    //렌더링 결과 확인
+    expect(header).toBeInTheDocument();
+  });
+
+  await waitFor(() => {
+    //렌더링 결과 확인
+    expect(button).toBeDisabled();
+  });
 });
 ```
 
@@ -164,10 +254,6 @@ test("App rendering", () => {
 - screen.debug
 
   테스트 과정에서 출력된 DOM을 확인하고 싶을 때 사용할 수 있습니다. 이 메서드를 호출하면 호출한 시점의 렌더링된 DOM tree를 확인할 수 있습니다.
-
-- act
-
-  테스트 도중 변하는 값이 있다면, act(()=>{})로 감싸서 코드를 작성해줘야 변하는 값이라는 것을 jest가 인지 할 수 있습니다.
 
 ### 요소를 가져오는 메서드들
 
@@ -209,15 +295,13 @@ getByDisplayValue;
 getByAltText;
 getByTitle;
 getByTestId;
-userEvent;
+fireEvent;
 ```
 
-실제 DOM상에서 유저처럼 이벤트를 발생시키기 위해서는 testing-library/user-event 라이브러리를 사용할 수 있습니다. userEvent.이벤트명(엘리먼트)의 형태로 활용할 수 있습니다.
+실제 DOM상에서 유저처럼 이벤트를 발생시키기 위해서는 testing-library/react 라이브러리를 사용할 수 있습니다. fireEvent.이벤트명(엘리먼트)의 형태로 활용할 수 있습니다.
 
 ```jsx
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-import "@testing-library/jest-dom";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import App from "./App";
 
 test("App rendering", () => {
@@ -225,7 +309,7 @@ test("App rendering", () => {
 
   const button = screen.getByText("Click me!");
 
-  userEvent.click(button);
+  fireEvent.click(button);
 });
 ```
 
