@@ -2,7 +2,7 @@
 
 빌드 타임에 모든 필요한 HTML을 미리 생성하는 것입니다. 이 HTML은 사용자가 페이지를 요청할 때마다 재사용됩니다. Next.js에서는 기본적으로 정적 페이지를 생성해주지만, 사용하는 방법을 알아봅시다.
 
-- getStaticProps()
+- `getStaticProps()`
 
   정적 생성할 때 필요한 데이터를 받아와서 렌더링하고 싶다면 getStaticProps() 함수를 구현하고 export하면 됩니다.
 
@@ -30,7 +30,7 @@ export default function Home({ products }) {
 }
 ```
 
-- getStaticPaths()
+- `getStaticPaths()`
 
   함수에서는 리턴 값으로 객체를 리턴하는데, paths 라는 배열에서 각 페이지에 해당하는 정보를 넘겨줄 수 있습니다.
   예를 들어서 id 값이 '1'인 페이지를 정적 생성하려면 `{ params: { id: '1' } }`과 같이 쓸 수 있습니다.
@@ -49,7 +49,7 @@ export async function getStaticPaths() {
 
 ### 서버 사이드 렌더링 (Server-Side Rendering, SSR)
 
-- getServerSideProps
+- `getServerSideProps`
 
   이 함수는 각 요청이 일을 때마다 실행되며, 페이지의 props를 반환합니다. 즉, 요청이 들어올 때마다 필요한 데이터를 서버에서 불러온 후, 이를 바탕으로 페이지를 생성합니다.
   `getServerSideProps`는 빌드와 상관없이, page가 요청받을때마다" 호출되어 pre-rendering합니다.
@@ -112,7 +112,7 @@ export const getServerSideProps = async (): Promise<any> => {
 
 ### getInitialProps 을 사용하지 않는 이유
 
-만약 모든 페이지에 공통적인 데이터 패칭이 필요하다면 \_app.tsx에서 전역적 데이터를 패칭해야 하는데, getInitialProps 이라는 기능을 사용합니다. 하지만 이 방식을 사용하면 SSR 계산없이 페이지를 정적 HTML으로 사전렌더링 해서 최적화를 하는 자동 정적 최적화(Automatic Static Optimization)가 비활성화되어 모든 페이지가 SSR을 통해 제공되게 됩니다.
+만약 모든 페이지에 공통적인 데이터 패칭이 필요하다면 \_app.tsx에서 전역적 데이터를 패칭해야 하는데, `getInitialProps` 이라는 기능을 사용합니다. 하지만 이 방식을 사용하면 SSR 계산없이 페이지를 정적 HTML으로 사전렌더링 해서 최적화를 하는 자동 정적 최적화(Automatic Static Optimization)가 비활성화되어 모든 페이지가 SSR을 통해 제공되게 됩니다.
 
 때문에 Next.js 9.3버전 이후엔 이런 것을 방지하고자 SSR과 SSG를 분리해 Static Generation(정적 생성)인 `getStaticProps`, `getStaticPath`와 `getServerSideProps`로 나눠졌으며, 전역적인 데이터 패치 기능을 지원하지 않습니다.
 

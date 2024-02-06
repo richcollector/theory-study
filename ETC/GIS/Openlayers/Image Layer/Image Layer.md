@@ -2,7 +2,7 @@
 
 Image Layer를 생성하기 위해 GeoServer에 택지정보시스템에서 제공하는 지구정보데이터를 레이어로 발행시켜두고 진행하였습니다.
 
-Image Layer 를 생성하기 위해 배경지도 맵을 생성합니다.
+Image Layer를 생성하기 위해 배경지도 맵을 생성합니다.
 Vector Layer와 동일하게 Map객체를 Layer와 View 객체를 나누어 선언하여도 되고 함께 사용해도 됩니다.
 
 ```jsx
@@ -30,14 +30,14 @@ const map = new ol.Map({
 });
 ```
 
-배경지도 맵을 생성한 뒤 이제 Image Layer를 생성할텐데, 그 전에 Openlayers에서 Image Layer를 사용할 수 있는 Source가 다양하게 있습니다.
+배경지도 맵을 생성한 뒤 이제 Image Layer를 생성할텐데, 그 전에 `Openlayers`에서 `Image Layer`를 사용할 수 있는 Source가 다양하게 있습니다.
 
-- ol.source.ImageArcGISRest
-- ol.source.ImageCanvas
-- ol.source.ImageMapGuide
-- ol.source.ImageStatic
-- ol.source.ImageWMS
-- ol.source.Raster
+- `ol.source.ImageArcGISRest`
+- `ol.source.ImageCanvas`
+- `ol.source.ImageMapGuide`
+- `ol.source.ImageStatic`
+- `ol.source.ImageWMS`
+- `ol.source.Raster`
 
 이 중에서 ol.source.ImageWMS를 사용했습니다.
 가장 기본적으로 사용되는 WMS source이고, GeoServer에 발행한 레이어를 호출할 수 있습니다.

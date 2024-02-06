@@ -1,7 +1,8 @@
 ## Amplify
 
-AWS 완전 관리형 서비스인 Amplify를 이용하여 Nextjs 어플리케이션을 배포합니다.
-Nextjs의 SSR 기능을 완벽하게 지원합니다.
+AWS Amplify는 풀 스택 서버리스 애플리케이션을 빠르게 개발하고 배포하기 위한 플랫폼입니다.
+Amplify는 다양한 기능을 제공하며, 그 중에서도 프론트엔드 애플리케이션을 쉽게 구축하고 배포할 수 있도록 도와줍니다.
+Next.js와 같은 프레임워크로 작성된 프로젝트를 Amplify에서 호스팅하면, Amplify의 특별한 설정 없이도 Next.js의 SSR(Server-Side Rendering) 기능을 지원할 수 있습니다.
 
 ![](./img/Amplify.png)
 

@@ -11,6 +11,91 @@
 Next.js에서는 useEffect를 통해 데이터를 CSR을 구현할 수 있습니다. 하지만 Next.js에서 CSR을 구현하려면 useEffect를 사용하기 보다는 SWR 훅을 사용하여 구현하는 것을 권장합니다. SWR을 사용하면 자동으로 캐싱하고 오래된 데이터를 갱신할 수 있습니다.
 이렇게 CSR로 구현된 부분은 pre-render를 하지 않고 자바스크립트로 화면을 render합니다.
 
+- SSR 메소드 대신 `useEffect()` 훅을 페이지 내부에 사용
+
+```jsx
+import React, { useState, useEffect } from "react";
+
+export function Page() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("https://api.example.com/data");
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const result = await response.json();
+      setData(result);
+    };
+
+    fetchData().catch((e) => {
+      // handle the error as needed
+      console.error("An error occurred while fetching the data: ", e);
+    });
+  }, []);
+
+  return <p>{data ? `Your data: ${data}` : "Loading..."}</p>;
+}
+```
+
+- `SWR` (Stale-While-Revalidate)
+
+  - 데이터를 가져오기 위한 React 훅 함수
+  - Vercel에서 만든, 데이터를 가져오기 위한 모듈
+  - 백그라운드에서 캐시에 대한 fetch 요청(revalidate)을 하는 동안 신선하지 않은 상태의 캐시 데이터를 사용하여 화면을 렌더링하다가 최종적으로는 최신화된 신선한 데이터를 반환
+  - 도중에 에러를 반환하더라도 기존 캐시 데이터를 사용할 수 있게 하여 불필요한 API Call과 렌더링을 최소화
+  - `npm i swr`로 설치하여 사용
+
+- useSWR
+
+```jsx
+import useSWR from "swr";
+
+const fetcher = (url: string) => axios.get(url);
+
+function Profile() {
+  const { data, error, isLoading } = useSWR("/api/url", fetcher, {// option});
+
+  if (error) return <div>failed to load</div>;
+  if (isLoading) return <div>loading...</div>;
+  return <div>hello {data.name}!</div>;
+}
+```
+
+- `useSWR(key, fetcher)`
+
+  - key(string): 데이터의 고유한 식별자 (일반적으로 API URL)
+
+  - fetcher(function): 데이터를 반환하는 비동기 함수 (axios, fetch 등)
+
+- 요청의 상태에 따라 {data, isLoading, error} 값을 반환
+
+  - data: 요청에 에러가 없는 경우 가져오는 데이터
+
+  - error: 요청에 에러가 있는 경우 발생한 오류
+
+- 세 번째 인자인 option 객체에 revalidate, mutate, initialData 등의 값을 넣어줄 수 있습니다.
+
+```jsx
+import useSWR from "swr";
+
+export function Page() {
+  const { data, error, isLoading } = useSWR(
+    "https://api.example.com/data",
+    fetcher
+  );
+
+  if (error) return <p>Failed to load.</p>;
+  if (isLoading) return <p>Loading...</p>;
+
+  return <p>Your Data: {data}</p>;
+}
+```
+
+Next.js 공식문서에서는 성능이나 캐싱, 낙관적 업데이트 등의 측면에서 data-fetching 라이브러리를 사용하는 것을 권장합니다.
+SWR은 자동으로 데이터를 캐싱하고 만약 데이터가 신선하지 않은 상태가 된다면 해당 데이터에 대해 revalidate를 진행합니다.
+
 참고 [링크](https://nextjs.org/docs/pages/building-your-application/data-fetching/client-side#client-side-data-fetching-with-useeffect)
 
 ### pre-render란? (hydration)
@@ -30,7 +115,7 @@ Nextjs의 기본은 pre-renders입니다. pre-render란 페이지에서 js를 �
 SSG에서 HTML은 build 할 때 발생합니다. 그 후에는 CDN으로 캐시 되어지고 매 요청마다 HTML을 재사용합니다.
 
 Next.js에서 일반적으로 컴포넌트를 생성하면 SSG로 동작합니다.
-리액트에서는 useEffect를 통해 렌더링 시 데이터를 가져오지만, Nextjs에서 SSG를 구현하려면 getStaticProps나 getStaticPaths를 사용해야 합니다.
+리액트에서는 useEffect를 통해 렌더링 시 데이터를 가져오지만, Nextjs에서 SSG를 구현하려면 **getStaticProps나 getStaticPaths를 사용해야 합니다.**
 
 ### 서버 사이드 렌더링(SSR, Server-Side Rendering)
 
@@ -42,7 +127,7 @@ SSR은 서버 비용을 크게 증가시킬 수 있으며, SEO에 크게 의존�
 
 #### Next.js에서의 SSR
 
-Next.js에서 SSR을 구현하기 위해서는 getServerSideProps을 사용하면 됩니다. getServerSideProps는 빌드시에 요청하는 것이 아니라 매 요청시마다 데이터를 요청하기 때문에 자주 업데이트 되어야 하는 페이지에 사용해야만 합니다.
+Next.js에서 SSR을 구현하기 위해서는 **getServerSideProps을 사용하면 됩니다.** getServerSideProps는 빌드시에 요청하는 것이 아니라 매 요청시마다 데이터를 요청하기 때문에 자주 업데이트 되어야 하는 페이지에 사용해야만 합니다.
 
 ### 점진적 정적 재생성(ISR, Incremental Static Regeneration)
 
@@ -70,7 +155,7 @@ export async function getStaticProps() {
 }
 ```
 
-Next.js에서는 getStaticProps에서 revalidate 옵션을 통해 ISR을 구현할 수 있다. revalidate은 데이터 패치 주기를 설정할 수 있는 옵션인데, 위와 같이 10으로 설정한다면 10초마다 데이터를 패칭할 수 있다.
+Next.js에서는 **getStaticProps에서 revalidate 옵션을 통해 ISR을 구현할 수 있습니다.** revalidate은 데이터 패치 주기를 설정할 수 있는 옵션인데, 위와 같이 10으로 설정한다면 10초마다 데이터를 패칭할 수 있습니다.
 
 ### 참고자료
 

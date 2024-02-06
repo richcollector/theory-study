@@ -90,7 +90,7 @@ Map객체에 필요한 Layer와 View객체를 추가하여 OSM기반의 배경�
 ![](./img/Openlayers1.png)
 
 여기에 추가로 WMS나 WFS, Vector, Tile 등 다양한 Layer 객체를 배경지도 위에 올려 표현할 수 있고,
-PostgreSQL등의 공간정보 사용이 가능한 데이터베이스와 Geoserver를 이용하여 많은 퍼포먼스를 낼 수 있습니다.
+`PostgreSQL`등의 공간정보 사용이 가능한 데이터베이스와 `Geoserver`를 이용하여 많은 퍼포먼스를 낼 수 있습니다.
 
 ### 참고자료
 

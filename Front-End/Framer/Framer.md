@@ -281,11 +281,24 @@ name을 꼭 설정해줘야 다른 곳에서 Section을 적용할 수 있습니�
 
 ## Insert
 
+### SlideShow
+
+### FormSpark
+
+폼스파크라는 서비스에서 제공하는 서비스입니다.
+
+가입하고, 워크스페이스를 만들어 주어야합니다.
+
+상단에 생긴 FormId를 Framer에 넣어줍니다.
+
+FormSpark에서 Submissions를 보면 SignUp한 정보를 볼 수가 있다.
+
 ### Icons
 
 - `Hero`
 
   name => ArrowCircleUp처럼 아이콘 모양을 바꿀 수 있습니다.
+  name 하단의 Hero Site을 눌러주시면 더 다양한 아이콘을 사용 가능합니다.
   Style에서 Blending => Difference를 해주면 배경에 따른 아이콘 색 변경 가능합니다.
 
 ## Layout
