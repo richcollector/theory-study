@@ -1,4 +1,4 @@
-## Next.js의 CSR, SSG, SSR, ISG
+## Next.js의 CSR, SSG, SSR, ISR
 
 ### 클라이언트 사이드 렌더링(CSR, Client-Side Rendering)
 
@@ -42,9 +42,13 @@ export function Page() {
 - `SWR` (Stale-While-Revalidate)
 
   - 데이터를 가져오기 위한 React 훅 함수
+
   - Vercel에서 만든, 데이터를 가져오기 위한 모듈
+
   - 백그라운드에서 캐시에 대한 fetch 요청(revalidate)을 하는 동안 신선하지 않은 상태의 캐시 데이터를 사용하여 화면을 렌더링하다가 최종적으로는 최신화된 신선한 데이터를 반환
+
   - 도중에 에러를 반환하더라도 기존 캐시 데이터를 사용할 수 있게 하여 불필요한 API Call과 렌더링을 최소화
+
   - `npm i swr`로 설치하여 사용
 
 - useSWR
@@ -100,7 +104,7 @@ SWR은 자동으로 데이터를 캐싱하고 만약 데이터가 신선하지 �
 
 ### pre-render란? (hydration)
 
-Nextjs의 기본은 pre-renders입니다. pre-render란 페이지에서 js를 우선하는게 아니라, HTML을 미리 만드는 것을 말합니다. 따라서 더 좋은 성능과 SEO를 기대할 수 있습니다. 이때 생성된 HTML은 최소한의 javascript 코드와 연결됩니다. 그 후에 브라우저가 로딩될 때 남은 javascript가 페이지와 상호작용하면서 페이지가 render 됩니다. 이러한 개념은 hydration이라는 개념이라고 부르기도 합니다. Nextjs가 pre-rendering하는 방법으로는 SSG와 SSR이 있습니다.
+Next.js의 기본은 pre-renders입니다. pre-render란 페이지에서 js를 우선하는게 아니라, HTML을 미리 만드는 것을 말합니다. 따라서 더 좋은 성능과 SEO를 기대할 수 있습니다. 이때 생성된 HTML은 최소한의 javascript 코드와 연결됩니다. 그 후에 브라우저가 로딩될 때 남은 javascript가 페이지와 상호작용하면서 페이지가 render 됩니다. 이러한 개념은 hydration이라는 개념이라고 부르기도 합니다. Next.js가 pre-rendering하는 방법으로는 SSG와 SSR이 있습니다.
 
 ### 정적 페이지 생성 (SSG, Static Site Generation)
 

@@ -26,7 +26,7 @@ next.js는 파일 시스템을 기반으로 라우팅을 구현합니다.
 - App Router
 
   - app 디렉토리를 사용합니다.
-  - app 하위에 모든 파일을 함께 구성할 수 있습니다. [colocation](https://velog.io/@jjunyjjuny/nextjs-13.4.0%EB%B6%80%ED%84%B0-%EC%95%88%EC%A0%95%ED%99%94%EB%90%9C-App-Router.-Pages-Router%EC%99%80-%EB%B9%84%EA%B5%90)
+  - app 하위에 모든 파일을 함께 구성할 수 있습니다. [colocation](https://nextjs.org/docs/app/building-your-application/routing#colocation)
     - 디렉토리로 경로를 정의합니다.
     - 페이지를 위한 파일은 page.js
     - server-side API를 위한 파일은 route.js
@@ -80,7 +80,7 @@ src/pages
 - Pages Router
 
   - 전역 공유 layout을 지정하기 위해 \_app 을 사용합니다.
-  - 단, 여러 layout을 compose 수 없습니다.
+  - 단, 여러 layout을 compose 할 수 없습니다.
   - data fetching과 component를 함께 배치할 수 없습니다.
 
 #### Advanced
@@ -110,6 +110,7 @@ next는 기본적으로 모든 경로의 페이지에 대한 HTML 파일을 사�
       - 캐싱 결과는 클라이언트로 전송되어 hydration 됩니다.
 
 - Pages Router
+
   - app router의 client component와 동일하게 동작합니다.
 
 #### ISR (incremental static regeneration)
