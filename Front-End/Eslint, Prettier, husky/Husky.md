@@ -16,7 +16,7 @@
 
 - `npm install husky --save-dev`
 
-  devdependency에 설치합니다.
+  dev dependency에 설치합니다.
 
 - `npx husky install`
 
@@ -33,6 +33,8 @@
 },
 }
 ```
+
+최근에는 "prepare": "husky install"로 자동으로 추가가 됩니다.
 
 - `add pre-commit`, `pre-push hook`
 
@@ -64,7 +66,8 @@
 }
 ```
 
-.ts 파일과 .tsx 파일 둘 다 검사할 것 이고 prettier도 사용하므로 다음과 같이 변형해서 사용했다. --fix는 간단한 에러를 자동으로 해결해 준다.
+.ts 파일과 .tsx 파일 둘 다 검사할 것 이고 prettier도 사용하므로 다음과 같이 변형해서 사용합니다.
+--fix는 간단한 에러를 자동으로 해결해 준다.
 
 ```jsx
 "lint-staged": {
@@ -83,8 +86,8 @@
 
 - `"no-console": ["error", { "allow": ["warn", "error", "info"] }]`
 
-  error로 설정할 경우 console.log가 하나라도 있으면 push가 안된다.
-  `eslint --max-warings=0`으로 warn조차 push 못하게 할 수 있다.
+  error로 설정할 경우 console.log가 하나라도 있으면 push가 안 됩니다.
+  `eslint --max-warings=0`으로 warn조차 push 못하게 할 수 있습니다.
 
 ```js
 {
