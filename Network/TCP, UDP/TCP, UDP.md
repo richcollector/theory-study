@@ -18,6 +18,8 @@ OSI 7계층에서 전송계층(Transport layer)에 속하는 데이터 전송 �
 
   TCP가 호스트 간에 연결을 설정하는 방법으로 SYN/ACK 패킷을 통해 이루어진다. SYN 패킷은 동기화(SYNchronize)를 의미하는 패킷이며 ACK 패킷은 확인(ACKnowledgement)을 의미하는 패킷이다.
 
+  ![](./3hand.png)
+
   - LISTEN
 
     서버가 클라이언트의 연결요청을 기다리고 있다.
