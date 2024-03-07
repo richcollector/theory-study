@@ -12,7 +12,7 @@ CORS(Cross-Origin Resource Sharing)는 출처가 다른 자원들을 공유한�
 https://beomy.github.io/tech/browser/cors/
 ```
 
-위의 구성요소 중에서 Protocol + Host + Port 3가지가 같으면 동일 출처(Origin)라고 합니다.
+**위의 구성요소 중에서 Protocol + Host + Port 3가지가 같으면 동일 출처(Origin)라고 합니다.**
 
 - 동일 출처 예시
 
@@ -70,7 +70,7 @@ https://beomy.github.io/tech/browser/cors/
 
 ### 동일 출처 요청 vs 다른 출처 요청 그림
 
-![](./policy.png)
+![](./img/policy.png)
 
 요청하는 클라이언트와 요청받는 서버가 같은 출처에 있으면 동일 출처, 서로 다른 서버에 있으면 다른 출처 요청입니다.
 
@@ -111,7 +111,7 @@ xhr.onreadystatechange = requestHandler;
 xhr.send();
 ```
 
-![](./comu.png)
+![](./img/comu.png)
 
 - 브라우저는 다른 출처에 자신의 주소 https://www.site.com를 origin에 담아서 요청을 보냅니다.
 
@@ -166,7 +166,7 @@ xhr.onreadystatechange = requestHandler;
 xhr.send();
 ```
 
-![](./preflight.png)
+![](./img/preflight.png)
 
 - 프리플라이트 요청은 OPTIONS 를 사용해 자신의 주소 https://www.api.com?q=test 를 보냅니다. 또한 origin, access-control-request-method, access-control-request-headers를 같이 보냅니다.
 
@@ -188,11 +188,11 @@ xhr.withCredentials = true;
 xhr.send();
 ```
 
-![](./cre.png)
+![](./img/cre.png)
 
 만약 서버 응답에 access-control-allow-credentials 가 true로 설정되지 않았거나 access-control-allow-origin 헤더에 있는 값이 허용된 출처가 아니라면 아래와 같이 오류가 발생합니다.
 
-![](./err.png)
+![](./img/err.png)
 
 ### 어떤 요청 방식을 사용해야 할까요?
 
