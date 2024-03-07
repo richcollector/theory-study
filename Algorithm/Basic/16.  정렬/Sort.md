@@ -92,7 +92,7 @@ const insertionSort = (data) => {
 };
 
 const dataList = [43, 21, 40, 18, 25, 24, 47, 8, 5, 35];
-console.log(selectionSort(dataList));
+console.log(insertionSort(dataList));
 ```
 
 - 삽입정렬의 장단점
@@ -162,7 +162,7 @@ const mergeSort = (data) => {
 };
 
 const dataList = [43, 21, 40, 18, 25, 24, 47, 8, 5, 35];
-console.log(selectionSort(dataList));
+console.log(mergeSort(dataList));
 // [5, 8, 18, 21, 24, 25, 35, 40, 43, 47]
 ```
 
