@@ -72,18 +72,39 @@ const example = () => {
 ```jsx
 // Class
 class Example extends React.Component {
-constructor(props) {
-super(props);
-this.state = { count: 0 };
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
 }
 
 // Hooks
 const Example = () => {
-const [count,setCount] = useState(0);
-}
+  const [count, setCount] = useState(0);
+};
 ```
 
 클래스형에서는 초기 state를 정할 때 constructor를 사용해야 합니다. 하지만 훅에서는 useState hook을 사용하면 초기 상태를 쉽게 설정해줄 수 있습니다.
+
+- getDerivedStateFromProps()
+
+  getDerivedStateFromProps 는 props로 받아온 것을 state 에 넣어주고 싶을 때 사용합니다.
+
+  ```jsx
+    static getDerivedStateFromProps(nextProps, prevState) {
+      console.log("getDerivedStateFromProps");
+      if (nextProps.color !== prevState.color) {
+        return { color: nextProps.color };
+      }
+      return null;
+    }
+  ```
+
+  다른 생명주기 메서드와는 달리 앞에 static을 필요로 하고, 이 안에서는 this를 조회 할 수 없습니다.
+  여기서 특정 객체를 반환하게 되면 해당 객체 안에 있는 내용들이 컴포넌트의 state 로 설정이 됩니다.
+  반면 null을 반환하게 되면 아무 일도 발생하지 않습니다.
+
+  **참고로 이 메서드는 컴포넌트가 처음 렌더링 되기 전에도 호출 되고, 그 이후 리렌더링 되기 전에도 매번 실행됩니다.**
 
 - componentDidMount()
 
@@ -156,6 +177,10 @@ const Example = () => {
 ```
 
 함수형 컴포넌트에서는 useEffect CleanUp 함수를 통해 해당 메서드를 구현할 수 있습니다.
+
+### 참고자료
+
+- [벨로퍼트와 함께하는 모던 리액트](https://react.vlpt.us/basic/25-lifecycle.html)
 
 #### 용어 공부
 

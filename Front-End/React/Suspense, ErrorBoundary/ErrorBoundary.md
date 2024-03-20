@@ -1,6 +1,7 @@
 ## ErrorBoundary
 
-하위 컴포넌트 트리의 렌더링 중 발생한 에러를 감지하여 컴포넌트 트리 대신 폴백 UI를 보여줄 수 있는 컴포넌트입니다. 아래 컴포넌트에서 에러 발생 시 throw 하여 에러에 관한 책임을 Error Boundary가 갖도록 한다.
+하위 컴포넌트 트리의 렌더링 중 발생한 에러를 감지하여 컴포넌트 트리 대신 폴백 UI를 보여줄 수 있는 컴포넌트입니다.
+아래 컴포넌트에서 에러 발생 시 throw 하여 에러에 관한 책임을 Error Boundary가 갖도록 한다.
 
 ```jsx
 function Fetcher({ children }) {
@@ -43,6 +44,26 @@ function Fetcher({ children }) {
 - 자식 컴포넌트에서가 아닌 Error Boundary 자체에서 발생하는 에러
 
 ```jsx
+import React from "react";
+import User from "./User";
+import ErrorBoundary from "./ErrorBoundary";
+
+function App() {
+  const user = {
+    id: 1,
+    username: "velopert",
+  };
+  return (
+    <ErrorBoundary>
+      <User />
+    </ErrorBoundary>
+  );
+}
+
+export default App;
+```
+
+```jsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -66,6 +87,40 @@ class ErrorBoundary extends React.Component {
   }
 }
 ```
+
+```jsx
+import React, { Component } from "react";
+
+class ErrorBoundary extends Component {
+  state = {
+    error: false,
+  };
+
+  componentDidCatch(error, info) {
+    console.log("에러가 발생했습니다.");
+    console.log({
+      error,
+      info,
+    });
+    this.setState({
+      error: true,
+    });
+  }
+
+  render() {
+    if (this.state.error) {
+      return <h1>에러 발생!</h1>;
+    }
+    return this.props.children;
+  }
+}
+
+export default ErrorBoundary;
+```
+
+여기서 componentDidCatch 메서드에는 두개의 파라미터를 사용하게 되는데 첫번째 파라미터는 에러의 내용, 두번째 파라미터에서는 에러가 발생한 위치를 알려줍니다.
+
+이 메서드에서 현재 컴포넌트 상태 error true로 설정을 해주고, render() 메서드에서는 만약 this.state.error 값이 true 라면 에러가 발생했다는 문구를 렌더링하도록 하고 그렇지 않다면 this.props.children을 렌더링합니다.
 
 ### 참고자료
 
