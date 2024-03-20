@@ -6,7 +6,21 @@
 
 조금 더 이해가 필요한 부분은 !를 붙여 이해가 될 때까지 반복해서 보려고합니다.
 
----
+<details>
+<summary>참고 서적 / 강의</summary>
+
+### 서적
+
+- 리액트 모던 웹 개발 with 타입스크립트 (학습 중)
+- 우아한 타입스크립트 with 리액트 (학습 중)
+
+### 강의
+
+- 고농축 프론트엔드 코스 - 코드캠프 (완료)
+- 프리온보딩 - 원티드 (완료)
+- 프론트엔드 챌린지 - 원티드 (완료)
+
+</details>
 
 ### Design-Pattern ＆ Architecture
 
@@ -140,6 +154,7 @@
 <details open>
 <summary>React.js</summary>
 
+- [Class](./Front-End/React/Class/Class.md)
 - [!JSX](./Front-End/React/JSX/JSX.md)
 - [!Suspense](./Front-End/React/Suspense,%20ErrorBoundary/Suspense.md)
 - [!ErrorBoundary](./Front-End/React/Suspense,%20ErrorBoundary/ErrorBoundary.md)
